@@ -20,7 +20,6 @@ A modern, interactive web application designed to help users learn the Persian (
 ## Project Structure
 
 ```text
-app/
 ├── public/                 # Static assets and pre-generated audio files
 ├── scripts/
 │   └── generate-audio.js   # Node.js script to fetch and generate TTS audio files
@@ -44,9 +43,10 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 ### Installation
 
-1. Clone the repository and navigate to the `app` directory:
+1. Clone the repository:
    ```bash
-   cd "learn farsi/app"
+   git clone https://github.com/Aliasgar-Jiwani/learn_persian.git
+   cd learn_persian
    ```
 
 2. Install the dependencies:
