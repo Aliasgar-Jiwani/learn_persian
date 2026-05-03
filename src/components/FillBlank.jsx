@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import SpeakButton from './SpeakButton';
 import './exercises.css';
 
@@ -7,15 +7,23 @@ export default function FillBlank({ exercise, onComplete }) {
   const [submitted, setSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
 
-  const wordBank = [
-    exercise.answer_farsi,
-    ...getDistractors(exercise.answer_farsi)
-  ].sort(() => Math.random() - 0.5);
+  const wordBank = useMemo(() => {
+    if (exercise.options) {
+      return [...exercise.options].sort(() => Math.random() - 0.5);
+    }
 
-  function getDistractors(correct) {
-    const distractors = ['کتاب', 'میز', 'در', 'قلم', 'بزرگ', 'کوچک', 'نیست', 'است', 'مداد', 'دفتر'];
-    return distractors.filter(w => w !== correct).sort(() => Math.random() - 0.5).slice(0, 3);
-  }
+    function getDistractors(correct) {
+      const distractors = ['کتاب', 'میز', 'در', 'قلم', 'بزرگ', 'کوچک', 'نیست', 'است', 'مداد', 'دفتر'];
+      return distractors.filter(w => w !== correct).sort(() => Math.random() - 0.5).slice(0, 3);
+    }
+    
+    return [
+      exercise.answer_farsi,
+      ...getDistractors(exercise.answer_farsi)
+    ].sort(() => Math.random() - 0.5);
+  }, [exercise]);
+
+
 
   function handleSubmit() {
     const correct = userAnswer.trim() === exercise.answer_farsi;

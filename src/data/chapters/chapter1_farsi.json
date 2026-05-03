@@ -1172,30 +1172,33 @@
       "type": "fill_blank",
       "id": "ex_fb_1",
       "question_farsi": "این ___ است.",
-      "question_english": "This is a ___.",
+      "question_english": "This is a book.",
       "answer_farsi": "کتاب",
       "answer_transliteration": "ketab",
       "answer_english": "book",
+      "options": ["کتاب", "است", "نیست", "بله"],
       "difficulty": "easy"
     },
     {
       "type": "fill_blank",
       "id": "ex_fb_2",
       "question_farsi": "آن ___ است.",
-      "question_english": "That is a ___.",
+      "question_english": "That is a desk.",
       "answer_farsi": "میز",
       "answer_transliteration": "miz",
       "answer_english": "desk",
+      "options": ["میز", "خیر", "آیا", "نیست"],
       "difficulty": "easy"
     },
     {
       "type": "fill_blank",
       "id": "ex_fb_3",
       "question_farsi": "این کتاب ___ است.",
-      "question_english": "This book is ___.",
+      "question_english": "This book is big.",
       "answer_farsi": "بزرگ",
       "answer_transliteration": "bozorg",
       "answer_english": "big",
+      "options": ["بزرگ", "دفتر", "در", "آیا"],
       "difficulty": "easy"
     },
     {
@@ -1206,6 +1209,7 @@
       "answer_farsi": "نیست",
       "answer_transliteration": "nist",
       "answer_english": "is not",
+      "options": ["نیست", "بله", "این", "استاد"],
       "difficulty": "easy"
     },
     {
@@ -1260,7 +1264,7 @@
       "difficulty": "easy",
       "question": {
         "farsi": "آیا این دفتر است؟",
-        "english": "Is this a notebook?"
+        "english": "Is this a notebook? (Answer: Yes)"
       },
       "options": [
         {

@@ -14,6 +14,7 @@ export default function ExercisesPage() {
   const { markComplete, saveExerciseScore } = useProgress(id);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState([]);
+  const [showResults, setShowResults] = useState(false);
 
   const exercises = useMemo(() => {
     if (!chapter) return [];
@@ -24,7 +25,6 @@ export default function ExercisesPage() {
 
   const currentExercise = exercises[currentIndex];
   const totalCorrect = results.filter(r => r).length;
-  const isComplete = results.length === exercises.length;
 
   function handleExerciseComplete(correct) {
     setResults(prev => {
@@ -40,12 +40,14 @@ export default function ExercisesPage() {
       setCurrentIndex(prev => prev + 1);
     } else {
       markComplete('exercises');
+      setShowResults(true);
     }
   }
 
   function handleRestart() {
     setCurrentIndex(0);
     setResults([]);
+    setShowResults(false);
   }
 
   function renderExercise(exercise) {
@@ -86,7 +88,7 @@ export default function ExercisesPage() {
       </div>
 
       {/* Exercise Area */}
-      {!isComplete ? (
+      {!showResults ? (
         <div className="exercises-page__content">
           {currentExercise && renderExercise(currentExercise)}
 

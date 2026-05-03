@@ -11,10 +11,7 @@ export default function Home() {
         <div className="hero__background"></div>
         
         <div className="hero__content">
-          <div className="hero__badge glass">
-            <Sparkles className="hero__badge-icon" size={16} />
-            <span>Premium Learning Experience</span>
-          </div>
+          
           
           <h1 className="hero__title">
             <span className="hero__title-farsi" dir="rtl">فارسی بیاموزید</span>
