@@ -1,35 +1,38 @@
 /* ======================================
-   LEARN PERSIAN — GLOBAL DESIGN SYSTEM
+   LEARN PERSIAN — PREMIUM DESIGN SYSTEM
    ====================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
 
 /* ── CSS Custom Properties ── */
 :root {
-  /* Primary Colors */
-  --color-primary: #1D9E75;
-  --color-primary-dark: #167a5b;
-  --color-primary-light: #e8f5f0;
-  --color-secondary: #378ADD;
-  --color-secondary-light: #e8f1fb;
-  --color-accent: #EF9F27;
-  --color-accent-light: #fef3e0;
+  /* Primary Colors - Deep Emerald/Teal inspired by Persian aesthetics */
+  --color-primary: #0F766E;      /* Teal 700 */
+  --color-primary-dark: #115E59; /* Teal 800 */
+  --color-primary-light: #CCFBF1; /* Teal 50 */
+  --color-secondary: #0369A1;    /* Sky 700 */
+  --color-secondary-light: #E0F2FE; /* Sky 50 */
+  --color-accent: #D97706;       /* Amber 600 */
+  --color-accent-light: #FEF3C7; /* Amber 50 */
 
   /* Feedback Colors */
-  --color-correct: #639922;
-  --color-wrong: #E24B4A;
+  --color-correct: #16A34A; /* Green 600 */
+  --color-correct-bg: #DCFCE7; /* Green 50 */
+  --color-wrong: #DC2626;   /* Red 600 */
+  --color-wrong-bg: #FEE2E2; /* Red 50 */
 
   /* Neutral Colors */
-  --color-bg: #FAFAF8;
-  --color-surface: #f5f5f3;
-  --color-border: #e8e8e4;
-  --color-text: #1a1a2e;
-  --color-text-secondary: #6b7280;
-  --color-text-tertiary: #9ca3af;
+  --color-bg: #F8FAF9;        /* Off-white, slightly warm/green tint */
+  --color-surface: #FFFFFF;
+  --color-border: #E5E7EB;
+  --color-text: #0F172A;      /* Slate 900 */
+  --color-text-secondary: #475569; /* Slate 600 */
+  --color-text-tertiary: #94A3B8;  /* Slate 400 */
 
   /* Typography */
-  --font-farsi: 'Vazirmatn', 'Noto Nastaliq Urdu', sans-serif;
+  --font-heading: 'Outfit', system-ui, sans-serif;
   --font-english: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-farsi: 'Vazirmatn', 'Noto Nastaliq Urdu', sans-serif;
 
   /* Spacing */
   --space-xs: 4px;
@@ -38,19 +41,21 @@
   --space-lg: 24px;
   --space-xl: 32px;
   --space-2xl: 48px;
+  --space-3xl: 64px;
 
   /* Borders */
   --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,0.1);
-  --shadow-xl: 0 16px 48px rgba(0,0,0,0.12);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+  --shadow-glow: 0 0 20px rgba(15, 118, 110, 0.15);
 }
 
 /* ── Reset & Base ── */
@@ -78,12 +83,18 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
 /* ── Persian / RTL Typography ── */
 [dir="rtl"],
 .farsi-text {
   font-family: var(--font-farsi);
   direction: rtl;
   text-align: right;
+  line-height: 1.8;
 }
 
 /* ── Links ── */
@@ -103,12 +114,15 @@ img {
 button {
   font-family: inherit;
   cursor: pointer;
+  border: none;
+  background: none;
 }
 
 button:focus-visible,
 a:focus-visible {
   outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
 }
 
 /* ── Selection ── */
@@ -128,14 +142,14 @@ a:focus-visible {
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-border);
-  border-radius: 3px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-text-tertiary);
 }
 
-/* ── Utility animations ── */
+/* ── Utility Classes & Animations ── */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -148,7 +162,31 @@ a:focus-visible {
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  50% { transform: scale(1.02); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hover-lift {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /* ── Mobile-first responsive helpers ── */

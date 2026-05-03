@@ -1,72 +1,91 @@
 .app {
   min-height: 100vh;
-  background: var(--color-bg);
+  background-color: var(--color-bg);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(15, 118, 110, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(3, 105, 161, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(217, 119, 6, 0.05) 0px, transparent 50%);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
 }
 
 .app__main {
-  padding-bottom: 70px;
+  flex: 1;
+  padding-bottom: 90px; /* Space for the new floating BottomNav */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .app__main {
-    padding-bottom: 0;
+    padding-bottom: 40px; /* Adjust if BottomNav is still present, or remove if sidebar */
   }
 }
 
-/* Placeholder Pages */
+/* Premium Placeholder Pages */
 .placeholder-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
-  padding: 24px;
+  min-height: calc(100vh - 100px);
+  padding: var(--space-lg);
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
 .placeholder-page__card {
   text-align: center;
-  background: white;
-  border-radius: 24px;
-  padding: 48px 36px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3xl) var(--space-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   max-width: 420px;
+  width: 100%;
 }
 
 .placeholder-page__icon {
-  font-size: 3.5rem;
-  display: block;
-  margin-bottom: 16px;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  display: flex;
+  justify-content: center;
 }
 
 .placeholder-page__card h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.75rem;
+  font-weight: 700;
   color: var(--color-text);
-  margin-bottom: 12px;
+  margin-bottom: var(--space-sm);
 }
 
 .placeholder-page__card p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
-  margin-bottom: 8px;
-  line-height: 1.5;
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
 }
 
 .placeholder-page__btn {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 10px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 14px 28px;
   background: var(--color-primary);
   color: white;
-  border-radius: 12px;
-  text-decoration: none;
+  border-radius: var(--radius-full);
   font-weight: 600;
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-md);
 }
 
 .placeholder-page__btn:hover {
-  background: #16a085;
+  background: var(--color-primary-dark);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
 /* Page loading */
@@ -77,4 +96,5 @@
   height: 60vh;
   font-size: 1.1rem;
   color: var(--color-text-secondary);
+  animation: pulse 2s infinite;
 }

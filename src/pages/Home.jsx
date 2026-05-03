@@ -1,54 +1,56 @@
 import { Link } from 'react-router-dom';
 import { chapters } from '../data/chapters';
+import { Play, Lock, Sparkles, Volume2, Edit3, BookOpen, ChevronRight } from 'lucide-react';
 import './Home.css';
 
 export default function Home() {
   return (
-    <div className="home">
+    <div className="home animate-fade-in">
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero__decoration hero__decoration--1" />
-        <div className="hero__decoration hero__decoration--2" />
-        <div className="hero__decoration hero__decoration--3" />
+        <div className="hero__background"></div>
         
         <div className="hero__content">
-          <div className="hero__badge">🌍 Free & Open</div>
+          <div className="hero__badge glass">
+            <Sparkles className="hero__badge-icon" size={16} />
+            <span>Premium Learning Experience</span>
+          </div>
+          
           <h1 className="hero__title">
             <span className="hero__title-farsi" dir="rtl">فارسی بیاموزید</span>
-            <span className="hero__title-translit">Farsi Biamoozid</span>
             <span className="hero__title-english">Learn Persian</span>
+            <span className="hero__title-translit">Farsi Biamoozid</span>
           </h1>
+          
           <p className="hero__subtitle">
-            Learn Persian step by step with audio pronunciation, visual flashcards, 
-            and interactive exercises. No sign-up required.
+            Master Persian step by step with native audio, intuitive visual flashcards, 
+            and interactive exercises.
           </p>
-          <Link to="/chapter/lesson_1" className="hero__cta">
+          
+          <Link to="/chapter/lesson_1" className="hero__cta hover-lift">
             <span>Start Learning</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            <Play size={18} className="hero__cta-icon" />
           </Link>
+          
           <p className="hero__guest-note">
-            <span className="hero__guest-icon">🎓</span>
-            Play without logging in
+            No sign-up required. Free & Open.
           </p>
         </div>
-
-        {/* Floating Farsi characters */}
-        <div className="hero__float hero__float--1" dir="rtl">سلام</div>
-        <div className="hero__float hero__float--2" dir="rtl">خوبی؟</div>
-        <div className="hero__float hero__float--3" dir="rtl">ممنون</div>
       </section>
 
       {/* Chapters Section */}
-      <section className="chapters-section">
-        <h2 className="chapters-section__title">Available Chapters</h2>
+      <section className="chapters-section animate-slide-up">
+        <div className="section-header">
+          <h2 className="section-title">Learning Path</h2>
+          <p className="section-subtitle">Start your journey from the basics</p>
+        </div>
+        
         <div className="chapters-grid">
           {chapters.map((chapter) => (
             <Link
               key={chapter.id}
               to={`/chapter/${chapter.id}`}
-              className="chapter-card"
+              className="chapter-card hover-lift glass"
             >
               <div className="chapter-card__number">
                 <span>{chapter.chapter}</span>
@@ -58,21 +60,25 @@ export default function Home() {
                 <div className="chapter-card__translit">{chapter.transliteration}</div>
                 <div className="chapter-card__english">{chapter.title}</div>
               </div>
-              <div className="chapter-card__arrow">→</div>
+              <div className="chapter-card__arrow">
+                <ChevronRight size={24} />
+              </div>
             </Link>
           ))}
 
           {/* Coming Soon cards */}
           {[2, 3, 4].map(num => (
-            <div key={num} className="chapter-card chapter-card--locked">
+            <div key={num} className="chapter-card chapter-card--locked glass">
               <div className="chapter-card__number chapter-card__number--locked">
                 <span>{num}</span>
               </div>
               <div className="chapter-card__info">
                 <div className="chapter-card__english">Coming Soon</div>
-                <div className="chapter-card__translit">More lessons on the way!</div>
+                <div className="chapter-card__translit">More lessons on the way</div>
               </div>
-              <div className="chapter-card__lock">🔒</div>
+              <div className="chapter-card__lock">
+                <Lock size={20} />
+              </div>
             </div>
           ))}
         </div>
@@ -80,27 +86,38 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="features-section">
-        <h2 className="features-section__title">How You'll Learn</h2>
+        <div className="section-header">
+          <h2 className="section-title">How You'll Learn</h2>
+        </div>
+        
         <div className="features-grid">
-          <div className="feature-card">
-            <div className="feature-card__icon">🎴</div>
+          <div className="feature-card hover-lift glass">
+            <div className="feature-card__icon-wrapper">
+              <Sparkles className="feature-card__icon" />
+            </div>
             <h3>Visual Flashcards</h3>
-            <p>Learn vocabulary with illustrated cards, arrow labels, and flip animations</p>
+            <p>Learn vocabulary with beautiful illustrated cards and animations</p>
           </div>
-          <div className="feature-card">
-            <div className="feature-card__icon">🔊</div>
-            <h3>Audio Pronunciation</h3>
-            <p>Hear every word and sentence spoken in native Farsi</p>
+          <div className="feature-card hover-lift glass">
+            <div className="feature-card__icon-wrapper">
+              <Volume2 className="feature-card__icon" />
+            </div>
+            <h3>Native Audio</h3>
+            <p>Hear every word and sentence spoken clearly in native Persian</p>
           </div>
-          <div className="feature-card">
-            <div className="feature-card__icon">📝</div>
-            <h3>Interactive Exercises</h3>
-            <p>Fill-in-the-blank, MCQ, matching, and word rearrangement</p>
+          <div className="feature-card hover-lift glass">
+            <div className="feature-card__icon-wrapper">
+              <Edit3 className="feature-card__icon" />
+            </div>
+            <h3>Interactive Practice</h3>
+            <p>Engaging exercises to test your memory and comprehension</p>
           </div>
-          <div className="feature-card">
-            <div className="feature-card__icon">📖</div>
-            <h3>Reading Practice</h3>
-            <p>Read real Persian text with tap-to-translate and transliteration</p>
+          <div className="feature-card hover-lift glass">
+            <div className="feature-card__icon-wrapper">
+              <BookOpen className="feature-card__icon" />
+            </div>
+            <h3>Reading Skills</h3>
+            <p>Read real Persian text with helpful tap-to-translate features</p>
           </div>
         </div>
       </section>

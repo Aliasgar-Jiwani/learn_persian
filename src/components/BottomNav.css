@@ -1,53 +1,84 @@
 .bottom-nav {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 90;
-  background: white;
-  border-top: 1px solid var(--color-border);
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 90%;
+  max-width: 400px;
+}
+
+.bottom-nav__container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 6px 0 env(safe-area-inset-bottom, 6px);
-  box-shadow: 0 -2px 12px rgba(0,0,0,0.06);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-full);
+  padding: 8px 12px;
+  box-shadow: var(--shadow-xl), 0 0 0 1px rgba(0,0,0,0.02);
 }
 
 .bottom-nav__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
   text-decoration: none;
   color: var(--color-text-tertiary);
-  font-size: 0.7rem;
-  font-weight: 500;
-  padding: 6px 16px;
-  border-radius: 12px;
-  transition: all 0.2s;
-  min-width: 64px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-xl);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  min-width: 72px;
+  position: relative;
 }
 
-.bottom-nav__item svg {
+.bottom-nav__icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.bottom-nav__icon {
   width: 22px;
   height: 22px;
+  stroke-width: 2.2;
+  transition: all 0.3s ease;
 }
 
 .bottom-nav__item:hover {
-  color: var(--color-primary);
+  color: var(--color-text-secondary);
+}
+
+.bottom-nav__item:hover .bottom-nav__icon-wrapper {
+  background: var(--color-surface);
+  transform: translateY(-2px);
 }
 
 .bottom-nav__item--active {
   color: var(--color-primary);
-  background: var(--color-primary-light);
 }
 
-.bottom-nav__item--active svg {
+.bottom-nav__item--active .bottom-nav__icon-wrapper {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+.bottom-nav__item--active .bottom-nav__icon {
   stroke-width: 2.5;
 }
 
 @media (min-width: 768px) {
   .bottom-nav {
-    display: none;
+    display: none; /* In a full app, we'd replace this with a sidebar on desktop */
   }
 }
