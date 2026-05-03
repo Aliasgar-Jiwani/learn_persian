@@ -3,14 +3,18 @@ import { useParams, Link } from 'react-router-dom';
 import { useChapter } from '../hooks/useChapter';
 import { useProgress } from '../hooks/useProgress';
 import VocabCard from '../components/VocabCard';
+import { 
+  Package, Users, Home as HomeIcon, Type, Sparkles, 
+  ArrowLeft, ArrowRight, Shuffle, Library, CheckCircle 
+} from 'lucide-react';
 import './VocabularyPage.css';
 
 const tabs = [
-  { key: 'nouns_objects', label: 'Objects', icon: '📦' },
-  { key: 'nouns_people', label: 'People', icon: '👥' },
-  { key: 'nouns_places', label: 'Places', icon: '🏠' },
-  { key: 'function_words', label: 'Function Words', icon: '🔤' },
-  { key: 'adjectives', label: 'Adjectives', icon: '✨' },
+  { key: 'nouns_objects', label: 'Objects', icon: Package },
+  { key: 'nouns_people', label: 'People', icon: Users },
+  { key: 'nouns_places', label: 'Places', icon: HomeIcon },
+  { key: 'function_words', label: 'Function Words', icon: Type },
+  { key: 'adjectives', label: 'Adjectives', icon: Sparkles },
 ];
 
 export default function VocabularyPage() {
@@ -19,6 +23,7 @@ export default function VocabularyPage() {
   const { markComplete } = useProgress(id);
   const [activeTab, setActiveTab] = useState('nouns_objects');
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFinished, setIsFinished] = useState(false);
 
   const items = useMemo(() => {
     if (!chapter) return [];
@@ -28,18 +33,26 @@ export default function VocabularyPage() {
 
   if (!chapter) return <div className="page-loading">Loading...</div>;
 
+  const currentTabIndex = tabs.findIndex(t => t.key === activeTab);
+  const isLastItem = currentIndex === items.length - 1;
+  const isLastTab = currentTabIndex === tabs.length - 1;
+
   function handlePrev() {
     setCurrentIndex(i => Math.max(0, i - 1));
   }
 
   function handleNext() {
-    setCurrentIndex(i => {
-      const next = Math.min(items.length - 1, i + 1);
-      if (next === items.length - 1) {
+    if (!isLastItem) {
+      setCurrentIndex(i => i + 1);
+    } else {
+      if (!isLastTab) {
+        setActiveTab(tabs[currentTabIndex + 1].key);
+        setCurrentIndex(0);
+      } else {
         markComplete('vocabulary');
+        setIsFinished(true);
       }
-      return next;
-    });
+    }
   }
 
   function handleShuffle() {
@@ -49,33 +62,54 @@ export default function VocabularyPage() {
   function handleTabChange(key) {
     setActiveTab(key);
     setCurrentIndex(0);
+    setIsFinished(false);
   }
 
   return (
     <div className="vocab-page">
       {/* Header */}
       <div className="vocab-page__header">
-        <Link to={`/chapter/${id}`} className="vocab-page__back">← Back</Link>
-        <h1 className="vocab-page__title">🎴 Vocabulary</h1>
+        <Link to={`/chapter/${id}`} className="vocab-page__back">
+          <ArrowLeft size={16} /> Back
+        </Link>
+        <h1 className="vocab-page__title">
+          <Library size={24} className="vocab-page__title-icon" /> Vocabulary
+        </h1>
         <p className="vocab-page__subtitle" dir="rtl">{chapter.title}</p>
       </div>
 
       {/* Tabs */}
       <div className="vocab-tabs">
-        {tabs.map(tab => (
-          <button
-            key={tab.key}
-            className={`vocab-tab ${activeTab === tab.key ? 'vocab-tab--active' : ''}`}
-            onClick={() => handleTabChange(tab.key)}
-          >
-            <span className="vocab-tab__icon">{tab.icon}</span>
-            <span className="vocab-tab__label">{tab.label}</span>
-          </button>
-        ))}
+        {tabs.map(tab => {
+          const Icon = tab.icon;
+          return (
+            <button
+              key={tab.key}
+              className={`vocab-tab ${activeTab === tab.key ? 'vocab-tab--active' : ''}`}
+              onClick={() => handleTabChange(tab.key)}
+            >
+              <span className="vocab-tab__icon">
+                <Icon size={18} />
+              </span>
+              <span className="vocab-tab__label">{tab.label}</span>
+            </button>
+          );
+        })}
       </div>
 
       {/* Card Area */}
-      {items.length > 0 ? (
+      {isFinished ? (
+        <div className="vocab-page__empty">
+          <div className="vocab-page__finished">
+            <CheckCircle size={48} color="var(--color-primary)" />
+            <h2>Great Job!</h2>
+            <p>You have completed all vocabulary sections.</p>
+            <Link to={`/chapter/${id}`} className="vocab-nav-btn" style={{ marginTop: '20px', textDecoration: 'none' }}>
+              Return to Chapter
+            </Link>
+          </div>
+        </div>
+      ) : items.length > 0 ? (
         <>
           <div className="vocab-page__counter">
             {currentIndex + 1} / {items.length}
@@ -92,13 +126,17 @@ export default function VocabularyPage() {
           {/* Navigation */}
           <div className="vocab-page__nav">
             <button className="vocab-nav-btn" onClick={handlePrev} disabled={currentIndex === 0}>
-              ← Previous
+              <ArrowLeft size={16} /> Previous
             </button>
             <button className="vocab-nav-btn vocab-nav-btn--shuffle" onClick={handleShuffle}>
-              🔀 Shuffle
+              <Shuffle size={16} /> Shuffle
             </button>
-            <button className="vocab-nav-btn" onClick={handleNext} disabled={currentIndex === items.length - 1}>
-              Next →
+            <button className="vocab-nav-btn" onClick={handleNext}>
+              {isLastItem ? (
+                isLastTab ? <>Finish <CheckCircle size={16} style={{marginLeft: '4px'}}/></> : <>Next Category <ArrowRight size={16} style={{marginLeft: '4px'}}/></>
+              ) : (
+                <>Next <ArrowRight size={16} style={{marginLeft: '4px'}}/></>
+              )}
             </button>
           </div>
         </>
