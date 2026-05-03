@@ -48,7 +48,12 @@ export function useSpeech() {
     // --- Strategy 1: Pre-recorded audio from audioMap ---
     const audioPath = audioMap[text];
     if (audioPath) {
-      const audio = getCachedAudio(audioPath);
+      const basePath = import.meta.env.BASE_URL;
+      const fullPath = audioPath.startsWith('/')
+        ? `${basePath}${audioPath.slice(1)}`
+        : `${basePath}${audioPath}`;
+        
+      const audio = getCachedAudio(fullPath);
       audioRef.current = audio;
 
       // Reset to beginning in case it was played before
