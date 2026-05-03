@@ -1,0 +1,253 @@
+.reading-page {
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.reading-page__header {
+  background: linear-gradient(135deg, #4a148c, #7b1fa2, #ce93d8);
+  padding: 24px 24px 28px;
+  color: white;
+}
+
+.reading-page__back {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.reading-page__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 8px 0 4px;
+}
+
+.reading-page__subtitle {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* Characters */
+.reading-page__characters {
+  display: flex;
+  gap: 10px;
+  padding: 16px 20px;
+  overflow-x: auto;
+}
+
+.character-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+.character-chip__avatar {
+  font-size: 1.5rem;
+}
+
+.character-chip__name {
+  font-family: 'Vazirmatn', sans-serif;
+  font-weight: 600;
+}
+
+.character-chip__translit {
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Mode Toggle */
+.reading-page__modes {
+  display: flex;
+  gap: 6px;
+  padding: 0 20px 12px;
+  justify-content: center;
+}
+
+.mode-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  color: var(--color-text-secondary);
+}
+
+.mode-btn--active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* Text Tabs */
+.reading-page__text-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 0 20px 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.reading-page__text-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.text-tab {
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.text-tab--active {
+  background: #7b1fa2;
+  color: white;
+  border-color: #7b1fa2;
+}
+
+/* Reading Card */
+.reading-card {
+  margin: 0 20px;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  overflow: hidden;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 20px;
+}
+
+.reading-card__title {
+  padding: 18px 22px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.reading-card__title span:first-child {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+.reading-card__sentences {
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sentence-block {
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--color-surface);
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.sentence-block:hover {
+  border-color: var(--color-border);
+  background: white;
+}
+
+.sentence-block__farsi {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 2;
+  margin-bottom: 4px;
+}
+
+.sentence-word {
+  cursor: pointer;
+  padding: 2px 0;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.sentence-word:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.sentence-block__translit {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-style: italic;
+  margin-bottom: 2px;
+}
+
+.sentence-block__english {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.sentence-block__audio {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+/* Word Tooltip */
+.word-tooltip {
+  position: fixed;
+  z-index: 200;
+  background: var(--color-text);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: tooltipFade 0.2s ease-out;
+  pointer-events: none;
+}
+
+.word-tooltip__farsi {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.word-tooltip__translit {
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.word-tooltip__english {
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+}
+
+.word-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--color-text);
+}
+
+@keyframes tooltipFade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

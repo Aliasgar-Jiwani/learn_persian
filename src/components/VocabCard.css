@@ -1,0 +1,195 @@
+.vocab-card-wrapper {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.vocab-card {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 20px;
+}
+
+.vocab-card--flipped {
+  transform: rotateY(180deg);
+}
+
+.vocab-card__front,
+.vocab-card__back {
+  position: absolute;
+  width: 100%;
+  min-height: 380px;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.vocab-card__back {
+  transform: rotateY(180deg);
+  justify-content: center;
+  padding: 30px 20px;
+  gap: 12px;
+}
+
+.vocab-card__image-container {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(135deg, #f0f9f5, #e8f4f8);
+}
+
+.vocab-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.vocab-card__emoji-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  background: linear-gradient(135deg, #f0f9f5, #e8f4f8);
+}
+
+.vocab-card__overlay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.vocab-card__arrow {
+  width: 80px;
+  height: 50px;
+}
+
+.vocab-card__farsi-label {
+  background: var(--color-primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(29, 158, 117, 0.3);
+}
+
+.vocab-card__hint {
+  padding: 14px;
+  color: var(--color-text-tertiary);
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.vocab-card__farsi {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.vocab-card__transliteration {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.vocab-card__english {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.vocab-card__badge {
+  display: inline-block;
+  padding: 3px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vocab-card__badge--easy {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.vocab-card__badge--medium {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.vocab-card__badge--hard {
+  background: #fce4ec;
+  color: #c62828;
+}
+
+.vocab-card__audio {
+  margin-top: 8px;
+}
+
+/* Opposite pair */
+.vocab-card__opposite {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+
+.vocab-card__opposite-arrow {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+.vocab-card__opposite-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.vocab-card__farsi-small {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.vocab-card__translit-small {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+.vocab-card__english-small {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}

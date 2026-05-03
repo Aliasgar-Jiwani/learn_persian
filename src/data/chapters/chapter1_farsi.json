@@ -1,0 +1,1351 @@
+{
+  "meta": {
+    "version": "1.0",
+    "language": "fa",
+    "script": "Persian (Arabic script)",
+    "transliteration_system": "simplified (kh/sh/ch/q/zh)",
+    "created_at": "2026-05",
+    "status": "production-ready"
+  },
+  "lesson_id": "lesson_1",
+  "chapter": 1,
+  "title": "درس اول",
+  "title_transliteration": "dars-e avval",
+  "title_english": "Lesson One",
+  "patterns": [
+    {
+      "id": "pattern_1",
+      "label": "Pattern 1 — این ... است",
+      "farsi": "این ... است.",
+      "transliteration": "in ... ast",
+      "english": "This is a ___.",
+      "examples": [
+        {
+          "farsi": "این کتاب است.",
+          "transliteration": "in ketab ast",
+          "english": "This is a book.",
+          "id": "pattern_1_ex_1",
+          "audio": null
+        },
+        {
+          "farsi": "این دفتر است.",
+          "transliteration": "in daftar ast",
+          "english": "This is a notebook.",
+          "id": "pattern_1_ex_2",
+          "audio": null
+        },
+        {
+          "farsi": "این مداد است.",
+          "transliteration": "in medad ast",
+          "english": "This is a pencil.",
+          "id": "pattern_1_ex_3",
+          "audio": null
+        },
+        {
+          "farsi": "این قلم است.",
+          "transliteration": "in qalam ast",
+          "english": "This is a pen.",
+          "id": "pattern_1_ex_4",
+          "audio": null
+        },
+        {
+          "farsi": "این در است.",
+          "transliteration": "in dar ast",
+          "english": "This is a door.",
+          "id": "pattern_1_ex_5",
+          "audio": null
+        },
+        {
+          "farsi": "این میز است.",
+          "transliteration": "in miz ast",
+          "english": "This is a desk.",
+          "id": "pattern_1_ex_6",
+          "audio": null
+        },
+        {
+          "farsi": "این دانشجو است.",
+          "transliteration": "in daneshjoo ast",
+          "english": "This is a student.",
+          "id": "pattern_1_ex_7",
+          "audio": null
+        },
+        {
+          "farsi": "این استاد است.",
+          "transliteration": "in ostad ast",
+          "english": "This is a professor.",
+          "id": "pattern_1_ex_8",
+          "audio": null
+        },
+        {
+          "farsi": "این پسر است.",
+          "transliteration": "in pesar ast",
+          "english": "This is a boy.",
+          "id": "pattern_1_ex_9",
+          "audio": null
+        },
+        {
+          "farsi": "این دختر است.",
+          "transliteration": "in doxtar ast",
+          "english": "This is a girl.",
+          "id": "pattern_1_ex_10",
+          "audio": null
+        },
+        {
+          "farsi": "این مرد است.",
+          "transliteration": "in mard ast",
+          "english": "This is a man.",
+          "id": "pattern_1_ex_11",
+          "audio": null
+        },
+        {
+          "farsi": "این زن است.",
+          "transliteration": "in zan ast",
+          "english": "This is a woman.",
+          "id": "pattern_1_ex_12",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "pattern_2",
+      "label": "Pattern 2 — آن ... است",
+      "farsi": "آن ... است.",
+      "transliteration": "an ... ast",
+      "english": "That is a ___.",
+      "examples": [
+        {
+          "farsi": "آن کتاب است.",
+          "transliteration": "an ketab ast",
+          "english": "That is a book.",
+          "id": "pattern_2_ex_1",
+          "audio": null
+        },
+        {
+          "farsi": "آن میز است.",
+          "transliteration": "an miz ast",
+          "english": "That is a desk.",
+          "id": "pattern_2_ex_2",
+          "audio": null
+        },
+        {
+          "farsi": "آن در است.",
+          "transliteration": "an dar ast",
+          "english": "That is a door.",
+          "id": "pattern_2_ex_3",
+          "audio": null
+        },
+        {
+          "farsi": "آن مداد است.",
+          "transliteration": "an medad ast",
+          "english": "That is a pencil.",
+          "id": "pattern_2_ex_4",
+          "audio": null
+        },
+        {
+          "farsi": "آن دانشجو است.",
+          "transliteration": "an daneshjoo ast",
+          "english": "That is a student.",
+          "id": "pattern_2_ex_5",
+          "audio": null
+        },
+        {
+          "farsi": "آن استاد است.",
+          "transliteration": "an ostad ast",
+          "english": "That is a professor.",
+          "id": "pattern_2_ex_6",
+          "audio": null
+        },
+        {
+          "farsi": "آن مرد است.",
+          "transliteration": "an mard ast",
+          "english": "That is a man.",
+          "id": "pattern_2_ex_7",
+          "audio": null
+        },
+        {
+          "farsi": "آن زن است.",
+          "transliteration": "an zan ast",
+          "english": "That is a woman.",
+          "id": "pattern_2_ex_8",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "pattern_3",
+      "label": "Pattern 3 — Yes/No Questions",
+      "farsi": "آیا این/آن ... است؟",
+      "transliteration": "aya in/an ... ast?",
+      "english": "Is this/that a ___?",
+      "responses": {
+        "yes": {
+          "farsi": "بله، ... است.",
+          "transliteration": "bale, ... ast",
+          "english": "Yes, it is a ___."
+        },
+        "no": {
+          "farsi": "خیر، ... نیست.",
+          "transliteration": "kheyr, ... nist",
+          "english": "No, it is not a ___."
+        }
+      },
+      "examples": [
+        {
+          "type": "yes_no",
+          "question": {
+            "farsi": "آیا این دفتر است؟",
+            "transliteration": "aya in daftar ast",
+            "english": "Is this a notebook?"
+          },
+          "correct_answer": "yes",
+          "explanation": {
+            "positive": {
+              "farsi": "بله، این دفتر است.",
+              "transliteration": "bale, in daftar ast",
+              "english": "Yes, this is a notebook."
+            }
+          },
+          "id": "pattern_3_ex_1"
+        },
+        {
+          "type": "yes_no",
+          "question": {
+            "farsi": "آیا آن در است؟",
+            "transliteration": "aya an dar ast",
+            "english": "Is that a door?"
+          },
+          "correct_answer": "yes",
+          "explanation": {
+            "positive": {
+              "farsi": "بله، آن در است.",
+              "transliteration": "bale, an dar ast",
+              "english": "Yes, that is a door."
+            }
+          },
+          "id": "pattern_3_ex_2"
+        },
+        {
+          "type": "yes_no",
+          "question": {
+            "farsi": "آیا آن مرد است؟",
+            "transliteration": "aya an mard ast",
+            "english": "Is that a man?"
+          },
+          "correct_answer": "yes",
+          "explanation": {
+            "positive": {
+              "farsi": "بله، آن مرد است.",
+              "transliteration": "bale, an mard ast",
+              "english": "Yes, that is a man."
+            }
+          },
+          "id": "pattern_3_ex_3"
+        },
+        {
+          "type": "yes_no",
+          "question": {
+            "farsi": "آیا آن استاد است؟",
+            "transliteration": "aya an ostad ast",
+            "english": "Is that a professor?"
+          },
+          "correct_answer": "yes",
+          "explanation": {
+            "positive": {
+              "farsi": "بله، آن استاد است.",
+              "transliteration": "bale, an ostad ast",
+              "english": "Yes, that is a professor."
+            }
+          },
+          "id": "pattern_3_ex_4"
+        },
+        {
+          "type": "yes_no",
+          "question": {
+            "farsi": "آیا آن میز است؟",
+            "transliteration": "aya an miz ast",
+            "english": "Is that a desk?"
+          },
+          "correct_answer": "no",
+          "explanation": {
+            "negative": {
+              "farsi": "خیر، آن میز نیست.",
+              "transliteration": "kheyr, an miz nist",
+              "english": "No, that is not a desk."
+            },
+            "correction": {
+              "farsi": "آن در است.",
+              "transliteration": "an dar ast",
+              "english": "That is a door."
+            }
+          },
+          "id": "pattern_3_ex_5"
+        },
+        {
+          "type": "yes_no",
+          "question": {
+            "farsi": "آیا این قلم است؟",
+            "transliteration": "aya in qalam ast",
+            "english": "Is this a pen?"
+          },
+          "correct_answer": "no",
+          "explanation": {
+            "negative": {
+              "farsi": "خیر، این قلم نیست.",
+              "transliteration": "kheyr, in qalam nist",
+              "english": "No, this is not a pen."
+            },
+            "correction": {
+              "farsi": "این دفتر است.",
+              "transliteration": "in daftar ast",
+              "english": "This is a notebook."
+            }
+          },
+          "id": "pattern_3_ex_6"
+        },
+        {
+          "type": "yes_no",
+          "question": {
+            "farsi": "آیا آن مرد است؟",
+            "transliteration": "aya an mard ast",
+            "english": "Is that a man?"
+          },
+          "correct_answer": "no",
+          "explanation": {
+            "negative": {
+              "farsi": "خیر، آن مرد نیست.",
+              "transliteration": "kheyr, an mard nist",
+              "english": "No, that is not a man."
+            },
+            "correction": {
+              "farsi": "آن زن است.",
+              "transliteration": "an zan ast",
+              "english": "That is a woman."
+            }
+          },
+          "id": "pattern_3_ex_7"
+        },
+        {
+          "type": "yes_no",
+          "question": {
+            "farsi": "آیا این دختر است؟",
+            "transliteration": "aya in doxtar ast",
+            "english": "Is this a girl?"
+          },
+          "correct_answer": "no",
+          "explanation": {
+            "negative": {
+              "farsi": "خیر، این دختر نیست.",
+              "transliteration": "kheyr, in doxtar nist",
+              "english": "No, this is not a girl."
+            },
+            "correction": {
+              "farsi": "این پسر است.",
+              "transliteration": "in pesar ast",
+              "english": "This is a boy."
+            }
+          },
+          "id": "pattern_3_ex_8"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "pattern_4",
+      "label": "Pattern 4 — Noun + Adjective",
+      "farsi": "این/آن [noun]، [adjective] است.",
+      "transliteration": "in/an [noun], [adjective] ast",
+      "english": "This/That ___ is ___.",
+      "examples": [
+        {
+          "farsi": "این کتاب، بزرگ است.",
+          "transliteration": "in ketab bozorg ast",
+          "english": "This book is big.",
+          "id": "pattern_4_ex_1",
+          "audio": null
+        },
+        {
+          "farsi": "آن کتاب، کوچک است.",
+          "transliteration": "an ketab kuchak ast",
+          "english": "That book is small.",
+          "id": "pattern_4_ex_2",
+          "audio": null
+        },
+        {
+          "farsi": "این مداد، بلند است.",
+          "transliteration": "in medad boland ast",
+          "english": "This pencil is tall/long.",
+          "id": "pattern_4_ex_3",
+          "audio": null
+        },
+        {
+          "farsi": "آن مداد، کوتاه است.",
+          "transliteration": "an medad kutah ast",
+          "english": "That pencil is short.",
+          "id": "pattern_4_ex_4",
+          "audio": null
+        },
+        {
+          "farsi": "این میز، سنگین است.",
+          "transliteration": "in miz sangin ast",
+          "english": "This desk is heavy.",
+          "id": "pattern_4_ex_5",
+          "audio": null
+        },
+        {
+          "farsi": "آن میز، سبک است.",
+          "transliteration": "an miz sabok ast",
+          "english": "That desk is light.",
+          "id": "pattern_4_ex_6",
+          "audio": null
+        },
+        {
+          "farsi": "این مرد، جوان است.",
+          "transliteration": "in mard javan ast",
+          "english": "This man is young.",
+          "id": "pattern_4_ex_7",
+          "audio": null
+        },
+        {
+          "farsi": "آن مرد، پیر است.",
+          "transliteration": "an mard pir ast",
+          "english": "That man is old.",
+          "id": "pattern_4_ex_8",
+          "audio": null
+        },
+        {
+          "farsi": "این دختر، سالم است.",
+          "transliteration": "in doxtar salem ast",
+          "english": "This girl is healthy.",
+          "id": "pattern_4_ex_9",
+          "audio": null
+        },
+        {
+          "farsi": "آن دختر، بیمار است.",
+          "transliteration": "an doxtar bimar ast",
+          "english": "That girl is sick.",
+          "id": "pattern_4_ex_10",
+          "audio": null
+        },
+        {
+          "farsi": "این خانه، زیبا است.",
+          "transliteration": "in khane ziba ast",
+          "english": "This house is beautiful.",
+          "id": "pattern_4_ex_11",
+          "audio": null
+        },
+        {
+          "farsi": "آن خانه، زشت است.",
+          "transliteration": "an khane zesht ast",
+          "english": "That house is ugly.",
+          "id": "pattern_4_ex_12",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    }
+  ],
+  "vocabulary": {
+    "nouns_objects": [
+      {
+        "farsi": "کتاب",
+        "transliteration": "ketab",
+        "english": "book",
+        "id": "vocab_001",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "دفتر",
+        "transliteration": "daftar",
+        "english": "notebook",
+        "id": "vocab_002",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "مداد",
+        "transliteration": "medad",
+        "english": "pencil",
+        "id": "vocab_003",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "قلم",
+        "transliteration": "qalam",
+        "english": "pen",
+        "id": "vocab_004",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "میز",
+        "transliteration": "miz",
+        "english": "desk / table",
+        "id": "vocab_005",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "در",
+        "transliteration": "dar",
+        "english": "door",
+        "id": "vocab_006",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      }
+    ],
+    "nouns_people": [
+      {
+        "farsi": "استاد",
+        "transliteration": "ostad",
+        "english": "professor / teacher",
+        "id": "vocab_007",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "دانشجو",
+        "transliteration": "daneshjoo",
+        "english": "student",
+        "id": "vocab_008",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "پسر",
+        "transliteration": "pesar",
+        "english": "boy / son",
+        "id": "vocab_009",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "دختر",
+        "transliteration": "doxtar",
+        "english": "girl / daughter",
+        "id": "vocab_010",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "مرد",
+        "transliteration": "mard",
+        "english": "man",
+        "id": "vocab_011",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "زن",
+        "transliteration": "zan",
+        "english": "woman",
+        "id": "vocab_012",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      }
+    ],
+    "nouns_places": [
+      {
+        "farsi": "خانه",
+        "transliteration": "khane",
+        "english": "house",
+        "id": "vocab_013",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "اتاق",
+        "transliteration": "otaq",
+        "english": "room",
+        "id": "vocab_014",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "مدرسه",
+        "transliteration": "madrese",
+        "english": "school",
+        "id": "vocab_015",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      }
+    ],
+    "function_words": [
+      {
+        "farsi": "این",
+        "transliteration": "in",
+        "english": "this",
+        "id": "vocab_016",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "آن",
+        "transliteration": "an",
+        "english": "that",
+        "id": "vocab_017",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "است",
+        "transliteration": "ast",
+        "english": "is (3rd person singular copula)",
+        "id": "vocab_018",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "نیست",
+        "transliteration": "nist",
+        "english": "is not (negative copula)",
+        "id": "vocab_019",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "بله",
+        "transliteration": "bale",
+        "english": "yes",
+        "id": "vocab_020",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "خیر",
+        "transliteration": "kheyr",
+        "english": "no",
+        "id": "vocab_021",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "آیا",
+        "transliteration": "aya",
+        "english": "question particle (yes/no marker)",
+        "id": "vocab_022",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "یک",
+        "transliteration": "yek",
+        "english": "one / a (indefinite article)",
+        "id": "vocab_023",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      }
+    ]
+  },
+  "adjectives": [
+    {
+      "farsi": "بزرگ",
+      "transliteration": "bozorg",
+      "english": "big / large",
+      "opposite": {
+        "farsi": "کوچک",
+        "transliteration": "kuchak",
+        "english": "small / little",
+        "id": "vocab_025",
+        "audio": null,
+        "image": null
+      },
+      "id": "vocab_024",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    },
+    {
+      "farsi": "بلند",
+      "transliteration": "boland",
+      "english": "tall / long / high",
+      "opposite": {
+        "farsi": "کوتاه",
+        "transliteration": "kutah",
+        "english": "short",
+        "id": "vocab_027",
+        "audio": null,
+        "image": null
+      },
+      "id": "vocab_026",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    },
+    {
+      "farsi": "سنگین",
+      "transliteration": "sangin",
+      "english": "heavy",
+      "opposite": {
+        "farsi": "سبک",
+        "transliteration": "sabok",
+        "english": "light (weight)",
+        "id": "vocab_029",
+        "audio": null,
+        "image": null
+      },
+      "id": "vocab_028",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    },
+    {
+      "farsi": "زیبا",
+      "transliteration": "ziba",
+      "english": "beautiful",
+      "opposite": {
+        "farsi": "زشت",
+        "transliteration": "zesht",
+        "english": "ugly",
+        "id": "vocab_031",
+        "audio": null,
+        "image": null
+      },
+      "id": "vocab_030",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    },
+    {
+      "farsi": "جوان",
+      "transliteration": "javan",
+      "english": "young",
+      "opposite": {
+        "farsi": "پیر",
+        "transliteration": "pir",
+        "english": "old (person)",
+        "id": "vocab_033",
+        "audio": null,
+        "image": null
+      },
+      "id": "vocab_032",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    },
+    {
+      "farsi": "سالم",
+      "transliteration": "salem",
+      "english": "healthy",
+      "opposite": {
+        "farsi": "بیمار",
+        "transliteration": "bimar",
+        "english": "sick / ill",
+        "id": "vocab_035",
+        "audio": null,
+        "image": null
+      },
+      "id": "vocab_034",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    },
+    {
+      "farsi": "شیک",
+      "transliteration": "shik",
+      "english": "chic / trendy",
+      "opposite": {
+        "farsi": "ساده",
+        "transliteration": "sade",
+        "english": "simple / plain",
+        "id": "vocab_037",
+        "audio": null,
+        "image": null
+      },
+      "id": "vocab_036",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    },
+    {
+      "farsi": "قدیمی",
+      "transliteration": "qadimi",
+      "english": "old / ancient (things/places)",
+      "opposite": null,
+      "id": "vocab_038",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    }
+  ],
+  "reading_texts": [
+    {
+      "id": "text_1",
+      "title": "متن ۱ — خانه",
+      "title_english": "Text 1 — The House",
+      "sentences": [
+        {
+          "farsi": "این یک خانه است.",
+          "transliteration": "in yek khane ast",
+          "english": "This is a house.",
+          "id": "text_1_sent_1",
+          "audio": null
+        },
+        {
+          "farsi": "این خانه بزرگ است.",
+          "transliteration": "in khane bozorg ast",
+          "english": "This house is big.",
+          "id": "text_1_sent_2",
+          "audio": null
+        },
+        {
+          "farsi": "این خانه کوچک نیست.",
+          "transliteration": "in khane kuchak nist",
+          "english": "This house is not small.",
+          "id": "text_1_sent_3",
+          "audio": null
+        },
+        {
+          "farsi": "آیا این خانه زشت است؟",
+          "transliteration": "aya in khane zesht ast",
+          "english": "Is this house ugly?",
+          "id": "text_1_sent_4",
+          "audio": null
+        },
+        {
+          "farsi": "خیر، این خانه زشت نیست.",
+          "transliteration": "kheyr, in khane zesht nist",
+          "english": "No, this house is not ugly.",
+          "id": "text_1_sent_5",
+          "audio": null
+        },
+        {
+          "farsi": "این خانه زیبا است.",
+          "transliteration": "in khane ziba ast",
+          "english": "This house is beautiful.",
+          "id": "text_1_sent_6",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "text_2",
+      "title": "متن ۲ — اتاق",
+      "title_english": "Text 2 — The Room",
+      "sentences": [
+        {
+          "farsi": "این اتاق است.",
+          "transliteration": "in otaq ast",
+          "english": "This is a room.",
+          "id": "text_2_sent_1",
+          "audio": null
+        },
+        {
+          "farsi": "این اتاق کوچک است.",
+          "transliteration": "in otaq kuchak ast",
+          "english": "This room is small.",
+          "id": "text_2_sent_2",
+          "audio": null
+        },
+        {
+          "farsi": "این اتاق بزرگ نیست.",
+          "transliteration": "in otaq bozorg nist",
+          "english": "This room is not big.",
+          "id": "text_2_sent_3",
+          "audio": null
+        },
+        {
+          "farsi": "آیا این اتاق شیک است؟",
+          "transliteration": "aya in otaq shik ast",
+          "english": "Is this room chic?",
+          "id": "text_2_sent_4",
+          "audio": null
+        },
+        {
+          "farsi": "بله، این اتاق شیک است.",
+          "transliteration": "bale, in otaq shik ast",
+          "english": "Yes, this room is chic.",
+          "id": "text_2_sent_5",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "text_3",
+      "title": "متن ۳ — مدرسه",
+      "title_english": "Text 3 — The School",
+      "sentences": [
+        {
+          "farsi": "این یک مدرسه است.",
+          "transliteration": "in yek madrese ast",
+          "english": "This is a school.",
+          "id": "text_3_sent_1",
+          "audio": null
+        },
+        {
+          "farsi": "این مدرسه بزرگ است.",
+          "transliteration": "in madrese bozorg ast",
+          "english": "This school is big.",
+          "id": "text_3_sent_2",
+          "audio": null
+        },
+        {
+          "farsi": "آیا این مدرسه قدیمی است؟",
+          "transliteration": "aya in madrese qadimi ast",
+          "english": "Is this school old?",
+          "id": "text_3_sent_3",
+          "audio": null
+        },
+        {
+          "farsi": "بله، این مدرسه قدیمی است.",
+          "transliteration": "bale, in madrese qadimi ast",
+          "english": "Yes, this school is old.",
+          "id": "text_3_sent_4",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "text_4",
+      "title": "متن ۴ — ژاله و کاوه",
+      "title_english": "Text 4 — Zhale and Kaveh (named people)",
+      "sentences": [
+        {
+          "farsi": "ژاله دختر است.",
+          "transliteration": "zhale doxtar ast",
+          "english": "Zhale is a girl.",
+          "id": "text_4_sent_1",
+          "audio": null
+        },
+        {
+          "farsi": "ژاله سالم است.",
+          "transliteration": "zhale salem ast",
+          "english": "Zhale is healthy.",
+          "id": "text_4_sent_2",
+          "audio": null
+        },
+        {
+          "farsi": "آیا ژاله سالم است؟",
+          "transliteration": "aya zhale salem ast",
+          "english": "Is Zhale healthy?",
+          "id": "text_4_sent_3",
+          "audio": null
+        },
+        {
+          "farsi": "بله، ژاله سالم است.",
+          "transliteration": "bale, zhale salem ast",
+          "english": "Yes, Zhale is healthy.",
+          "id": "text_4_sent_4",
+          "audio": null
+        },
+        {
+          "farsi": "کاوه پسر است.",
+          "transliteration": "kaveh pesar ast",
+          "english": "Kaveh is a boy.",
+          "id": "text_4_sent_5",
+          "audio": null
+        },
+        {
+          "farsi": "کاوه بیمار است.",
+          "transliteration": "kaveh bimar ast",
+          "english": "Kaveh is sick.",
+          "id": "text_4_sent_6",
+          "audio": null
+        },
+        {
+          "farsi": "آیا کاوه بیمار است؟",
+          "transliteration": "aya kaveh bimar ast",
+          "english": "Is Kaveh sick?",
+          "id": "text_4_sent_7",
+          "audio": null
+        },
+        {
+          "farsi": "بله، کاوه بیمار است.",
+          "transliteration": "bale, kaveh bimar ast",
+          "english": "Yes, Kaveh is sick.",
+          "id": "text_4_sent_8",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    }
+  ],
+  "summary": {
+    "title": "خلاصه",
+    "title_english": "Summary",
+    "sentence_structures": [
+      {
+        "type": "Affirmative statement",
+        "structure_farsi": "این / آن + [noun] + است",
+        "example_farsi": "این کتاب است.",
+        "example_english": "This is a book."
+      },
+      {
+        "type": "Affirmative with adjective",
+        "structure_farsi": "این / آن + [noun] + [adjective] + است",
+        "example_farsi": "این کتاب بزرگ است.",
+        "example_english": "This book is big."
+      },
+      {
+        "type": "Yes/No question",
+        "structure_farsi": "آیا + این / آن + [noun] + است؟",
+        "example_farsi": "آیا این کتاب است؟",
+        "example_english": "Is this a book?"
+      },
+      {
+        "type": "Yes/No question with adjective",
+        "structure_farsi": "آیا + این / آن + [noun] + [adjective] + است؟",
+        "example_farsi": "آیا این کتاب بزرگ است؟",
+        "example_english": "Is this book big?"
+      },
+      {
+        "type": "Affirmative answer",
+        "structure_farsi": "بله + این / آن + [noun] + [adjective] + است",
+        "example_farsi": "بله، این کتاب بزرگ است.",
+        "example_english": "Yes, this book is big."
+      },
+      {
+        "type": "Negative answer",
+        "structure_farsi": "خیر + این / آن + [noun] + [adjective] + نیست",
+        "example_farsi": "خیر، این کتاب بزرگ نیست.",
+        "example_english": "No, this book is not big."
+      }
+    ],
+    "vocabulary_groups": {
+      "copula": [
+        "است",
+        "نیست"
+      ],
+      "objects": [
+        "کتاب",
+        "میز",
+        "قلم",
+        "مداد",
+        "دفتر",
+        "در"
+      ],
+      "people": [
+        "دانشجو",
+        "دختر",
+        "مرد",
+        "پسر",
+        "استاد",
+        "زن"
+      ],
+      "places": [
+        "خانه",
+        "اتاق",
+        "مدرسه"
+      ],
+      "demonstratives": [
+        "این",
+        "آن"
+      ],
+      "particles": [
+        "بله",
+        "خیر",
+        "آیا"
+      ],
+      "adjectives_size": [
+        "کوچک",
+        "بزرگ",
+        "بلند",
+        "کوتاه",
+        "سبک",
+        "سنگین"
+      ],
+      "adjectives_quality": [
+        "زیبا",
+        "زشت",
+        "شیک",
+        "ساده",
+        "سالم",
+        "بیمار",
+        "پیر",
+        "جوان",
+        "قدیمی"
+      ]
+    }
+  },
+  "dictation_section": {
+    "title": "دیکته و رسم‌الخط",
+    "title_english": "Dictation and writing",
+    "phoneme_note": "The vowel [e] is written two ways in Persian:",
+    "spelling_groups": [
+      {
+        "sound": "e",
+        "written_with_kasra": [
+          "یک",
+          "سالم",
+          "دانشجو",
+          "کتاب",
+          "مداد"
+        ],
+        "written_with_he": [
+          "سه / ه",
+          "بله",
+          "خانه",
+          "مدرسه",
+          "ستاره [setare]",
+          "ساده [sade]"
+        ]
+      }
+    ]
+  },
+  "named_characters": [
+    {
+      "name_farsi": "ژاله",
+      "name_transliteration": "zhale",
+      "gender": "female",
+      "description": "girl character used in reading text"
+    },
+    {
+      "name_farsi": "کاوه",
+      "name_transliteration": "kaveh",
+      "gender": "male",
+      "description": "boy character used in reading text"
+    }
+  ],
+  "extra_vocabulary_from_texts": [
+    {
+      "farsi": "ستاره",
+      "transliteration": "setare",
+      "english": "star",
+      "category": "noun",
+      "audio": null,
+      "image": null
+    },
+    {
+      "farsi": "طلا",
+      "transliteration": "tala",
+      "english": "gold",
+      "category": "noun",
+      "audio": null,
+      "image": null
+    },
+    {
+      "farsi": "زرین",
+      "transliteration": "zarin",
+      "english": "golden",
+      "category": "adjective",
+      "audio": null,
+      "image": null
+    },
+    {
+      "farsi": "مستطیل",
+      "transliteration": "mostatil",
+      "english": "rectangle",
+      "category": "noun",
+      "audio": null,
+      "image": null
+    },
+    {
+      "farsi": "مثلث",
+      "transliteration": "mosalles",
+      "english": "triangle",
+      "category": "noun",
+      "audio": null,
+      "image": null
+    }
+  ],
+  "exercises": [
+    {
+      "type": "fill_blank",
+      "id": "ex_fb_1",
+      "question_farsi": "این ___ است.",
+      "question_english": "This is a ___.",
+      "answer_farsi": "کتاب",
+      "answer_transliteration": "ketab",
+      "answer_english": "book",
+      "difficulty": "easy"
+    },
+    {
+      "type": "fill_blank",
+      "id": "ex_fb_2",
+      "question_farsi": "آن ___ است.",
+      "question_english": "That is a ___.",
+      "answer_farsi": "میز",
+      "answer_transliteration": "miz",
+      "answer_english": "desk",
+      "difficulty": "easy"
+    },
+    {
+      "type": "fill_blank",
+      "id": "ex_fb_3",
+      "question_farsi": "این کتاب ___ است.",
+      "question_english": "This book is ___.",
+      "answer_farsi": "بزرگ",
+      "answer_transliteration": "bozorg",
+      "answer_english": "big",
+      "difficulty": "easy"
+    },
+    {
+      "type": "fill_blank",
+      "id": "ex_fb_4",
+      "question_farsi": "خیر، این قلم ___.",
+      "question_english": "No, this is not a pen.",
+      "answer_farsi": "نیست",
+      "answer_transliteration": "nist",
+      "answer_english": "is not",
+      "difficulty": "easy"
+    },
+    {
+      "type": "mcq",
+      "id": "ex_mcq_1",
+      "difficulty": "easy",
+      "question": {
+        "english": "What is کتاب?"
+      },
+      "options": [
+        {
+          "english": "book"
+        },
+        {
+          "english": "pencil"
+        },
+        {
+          "english": "door"
+        },
+        {
+          "english": "desk"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "type": "mcq",
+      "id": "ex_mcq_2",
+      "difficulty": "easy",
+      "question": {
+        "english": "Which word means 'that'?"
+      },
+      "options": [
+        {
+          "farsi": "این"
+        },
+        {
+          "farsi": "آن"
+        },
+        {
+          "farsi": "است"
+        },
+        {
+          "farsi": "بله"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "type": "mcq",
+      "id": "ex_mcq_3",
+      "difficulty": "easy",
+      "question": {
+        "farsi": "آیا این دفتر است؟",
+        "english": "Is this a notebook?"
+      },
+      "options": [
+        {
+          "farsi": "بله، این دفتر است."
+        },
+        {
+          "farsi": "خیر، این دفتر نیست."
+        },
+        {
+          "farsi": "آن دفتر است."
+        },
+        {
+          "farsi": "این مداد است."
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "type": "matching",
+      "id": "ex_match_1",
+      "instruction": "Match the Persian word to its English meaning.",
+      "pairs": [
+        {
+          "farsi": "استاد",
+          "english": "professor"
+        },
+        {
+          "farsi": "دانشجو",
+          "english": "student"
+        },
+        {
+          "farsi": "مداد",
+          "english": "pencil"
+        },
+        {
+          "farsi": "خانه",
+          "english": "house"
+        },
+        {
+          "farsi": "بزرگ",
+          "english": "big"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "type": "rearrange",
+      "id": "ex_rearrange_1",
+      "instruction": "Put the words in the correct order to form a sentence.",
+      "words_farsi": [
+        "است",
+        "کتاب",
+        "این"
+      ],
+      "correct_sentence_farsi": "این کتاب است.",
+      "correct_sentence_english": "This is a book.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "rearrange",
+      "id": "ex_rearrange_2",
+      "instruction": "Put the words in the correct order to form a sentence.",
+      "words_farsi": [
+        "است",
+        "بزرگ",
+        "آن",
+        "خانه"
+      ],
+      "correct_sentence_farsi": "آن خانه بزرگ است.",
+      "correct_sentence_english": "That house is big.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "rearrange",
+      "id": "ex_rearrange_3",
+      "instruction": "Put the words in the correct order to form a yes/no question.",
+      "words_farsi": [
+        "است",
+        "آیا",
+        "این",
+        "میز"
+      ],
+      "correct_sentence_farsi": "آیا این میز است؟",
+      "correct_sentence_english": "Is this a desk?",
+      "difficulty": "medium"
+    }
+  ]
+}

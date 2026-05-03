@@ -1,0 +1,191 @@
+.exercises-page {
+  padding-bottom: 100px;
+}
+
+.exercises-page__header {
+  background: linear-gradient(135deg, #e65100, #ef6c00, #EF9F27);
+  padding: 24px 24px 28px;
+  color: white;
+}
+
+.exercises-page__back {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.exercises-page__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 8px 0 4px;
+}
+
+.exercises-page__subtitle {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* Progress */
+.exercises-page__progress {
+  padding: 16px 20px 0;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.exercises-page__progress-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.exercises-page__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent), #f7d794);
+  border-radius: 8px;
+  transition: width 0.4s ease;
+}
+
+.exercises-page__counter {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+/* Content */
+.exercises-page__content {
+  padding: 20px;
+  max-width: 650px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.exercises-page__next-btn {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto 0;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--color-primary), #16a085);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.exercises-page__next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(29, 158, 117, 0.3);
+}
+
+/* Results */
+.exercises-page__results {
+  padding: 40px 20px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.results-card {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  background: white;
+  border-radius: 24px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+}
+
+.results-card__emoji {
+  font-size: 4rem;
+  margin-bottom: 12px;
+}
+
+.results-card__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.results-card__score {
+  margin-bottom: 16px;
+}
+
+.results-card__number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.results-card__total {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.results-card__bar {
+  width: 100%;
+  height: 12px;
+  background: var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.results-card__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-correct), #8bc34a);
+  border-radius: 12px;
+  transition: width 1s ease-out;
+}
+
+.results-card__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.results-card__retry {
+  padding: 12px 24px;
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.results-card__retry:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.results-card__done {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.results-card__done:hover {
+  background: #16a085;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}

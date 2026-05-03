@@ -1,0 +1,234 @@
+.summary-page {
+  padding-bottom: 100px;
+}
+
+.summary-page__header {
+  background: linear-gradient(135deg, #1b5e20, #2e7d32, #66bb6a);
+  padding: 24px 24px 28px;
+  color: white;
+}
+
+.summary-page__back {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.summary-page__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 8px 0 4px;
+}
+
+.summary-page__subtitle {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.summary-page__content {
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.summary-section {
+  margin-bottom: 32px;
+}
+
+.summary-section__title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-primary-light);
+}
+
+.summary-section__note {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* Structure Cards */
+.summary-section__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.structure-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.structure-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.structure-card__type {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-secondary);
+}
+
+.structure-card__formula {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 6px 10px;
+  background: var(--color-primary-light);
+  border-radius: 8px;
+}
+
+.structure-card__example {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.structure-card__farsi {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.structure-card__english {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Vocabulary Groups */
+.vocab-group {
+  margin-bottom: 16px;
+}
+
+.vocab-group__title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.vocab-group__words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.vocab-word-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.vocab-word-chip:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+/* Dictation */
+.dictation-group__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.dictation-group__col h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.dictation-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.dictation-word {
+  padding: 4px 12px;
+  background: var(--color-surface);
+  border-radius: 8px;
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 0.95rem;
+  border: 1px solid var(--color-border);
+}
+
+/* Completion */
+.summary-page__complete {
+  margin-top: 32px;
+}
+
+.complete-badge {
+  text-align: center;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  border: 2px solid var(--color-correct);
+  border-radius: 24px;
+  padding: 40px 30px;
+}
+
+.complete-badge__emoji {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.complete-badge h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-correct);
+  margin-bottom: 6px;
+}
+
+.complete-badge p {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+.complete-badge__btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--color-correct);
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.complete-badge__btn:hover {
+  background: #4e8b1a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  .dictation-group__row {
+    grid-template-columns: 1fr;
+  }
+}
