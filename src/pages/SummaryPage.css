@@ -208,6 +208,110 @@
   border: 1px solid var(--color-border);
 }
 
+/* Sound Groups (Chapter 2 dictation style) */
+.dictation-sounds {
+  margin-top: 16px;
+}
+
+.dictation-sounds__letter {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dictation-sounds__letter-char {
+  display: inline-block;
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(var(--color-primary-rgb, 0,0,0), 0.15);
+}
+
+.dictation-sounds__groups {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sound-group {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 16px;
+  transition: all 0.2s;
+}
+
+.sound-group:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.sound-group__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sound-group__sound {
+  font-family: 'Inter', monospace;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 4px 14px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+}
+
+.sound-group__desc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.sound-group__examples {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sound-group__example {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--color-surface);
+  flex-wrap: wrap;
+}
+
+.sound-group__farsi {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 60px;
+}
+
+.sound-group__translit {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  min-width: 60px;
+}
+
+.sound-group__english {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
 /* Completion */
 .summary-page__complete {
   margin-top: 32px;

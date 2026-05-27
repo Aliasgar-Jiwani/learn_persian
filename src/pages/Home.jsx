@@ -64,7 +64,7 @@ export default function Home() {
           ))}
 
           {/* Coming Soon cards */}
-          {[2, 3, 4].map(num => (
+          {[3, 4, 5].map(num => (
             <div key={num} className="chapter-card chapter-card--locked glass">
               <div className="chapter-card__number chapter-card__number--locked">
                 <span>{num}</span>

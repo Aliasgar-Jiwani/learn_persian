@@ -1,0 +1,1571 @@
+{
+  "meta": {
+    "version": "1.0",
+    "language": "fa",
+    "script": "Persian (Arabic script)",
+    "transliteration_system": "simplified (kh/sh/ch/q/zh)",
+    "created_at": "2026-05",
+    "status": "production-ready"
+  },
+  "lesson_id": "lesson_2",
+  "chapter": 2,
+  "title": "درس دوم",
+  "title_transliteration": "dars-e dovvom",
+  "title_english": "Lesson Two",
+  "patterns": [
+    {
+      "id": "pattern_1",
+      "label": "Pattern 1 — X روی Y است (X is on Y)",
+      "farsi": "[noun] روی [place] است.",
+      "transliteration": "[noun] roo-ye [place] ast",
+      "english": "___ is on the ___.",
+      "grammar_note": "روی (roo-ye) = on top of. The ezafe -e links the preposition to the following noun: روی میز = on the table.",
+      "examples": [
+        {
+          "farsi": "کتاب روی میز است.",
+          "transliteration": "ketab roo-ye miz ast",
+          "english": "The book is on the table.",
+          "id": "pattern_1_ex_1",
+          "audio": null
+        },
+        {
+          "farsi": "مداد روی دفتر است.",
+          "transliteration": "medad roo-ye daftar ast",
+          "english": "The pencil is on the notebook.",
+          "id": "pattern_1_ex_2",
+          "audio": null
+        },
+        {
+          "farsi": "کیف روی میز است.",
+          "transliteration": "kif roo-ye miz ast",
+          "english": "The bag is on the table.",
+          "id": "pattern_1_ex_3",
+          "audio": null
+        },
+        {
+          "farsi": "کیف کوچک روی میز است.",
+          "transliteration": "kif-e kuchak roo-ye miz ast",
+          "english": "The small bag is on the table.",
+          "id": "pattern_1_ex_4",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "pattern_2",
+      "label": "Pattern 2 — X زیر Y است (X is under Y)",
+      "farsi": "[noun] زیر [place] است.",
+      "transliteration": "[noun] zir-e [place] ast",
+      "english": "___ is under the ___.",
+      "grammar_note": "زیر (zir) = under/below. Same ezafe construction as روی.",
+      "examples": [
+        {
+          "farsi": "دفتر زیر میز است.",
+          "transliteration": "daftar zir-e miz ast",
+          "english": "The notebook is under the table.",
+          "id": "pattern_2_ex_1",
+          "audio": null
+        },
+        {
+          "farsi": "قلم زیر کتاب است.",
+          "transliteration": "qalam zir-e ketab ast",
+          "english": "The pen is under the book.",
+          "id": "pattern_2_ex_2",
+          "audio": null
+        },
+        {
+          "farsi": "دختر کوچک زیر میز است.",
+          "transliteration": "dokhtar-e kuchak zir-e miz ast",
+          "english": "The little girl is under the table.",
+          "id": "pattern_2_ex_3",
+          "audio": null
+        },
+        {
+          "farsi": "مداد کوچک تو زیر کتاب است.",
+          "transliteration": "medad-e kuchak-e to zir-e ketab ast",
+          "english": "Your small pencil is under the book.",
+          "id": "pattern_2_ex_4",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "pattern_3",
+      "label": "Pattern 3 — Ezafe: Noun + Adjective",
+      "farsi": "[noun]-ِ [adjective]",
+      "transliteration": "[noun]-e [adjective]",
+      "english": "___ (adjective) ___ (noun) — adjective follows the noun, linked by ezafe -e",
+      "grammar_note": "The ezafe (-e or -ye) is a short unstressed vowel suffix that links a noun to its modifier. It is not written in standard script but is pronounced. Example: کتاب بزرگ [ketab-e bozorg] = big book.",
+      "examples": [
+        {
+          "farsi": "کتاب کوچک زیر میز است.",
+          "transliteration": "ketab-e kuchak zir-e miz ast",
+          "english": "The small book is under the table.",
+          "id": "pattern_3_ex_1",
+          "audio": null
+        },
+        {
+          "farsi": "کتاب بزرگ روی میز است.",
+          "transliteration": "ketab-e bozorg roo-ye miz ast",
+          "english": "The big book is on the table.",
+          "id": "pattern_3_ex_2",
+          "audio": null
+        },
+        {
+          "farsi": "قلم کوتاه زیر کتاب است.",
+          "transliteration": "qalam-e kutah zir-e ketab ast",
+          "english": "The short pen is under the book.",
+          "id": "pattern_3_ex_3",
+          "audio": null
+        },
+        {
+          "farsi": "مداد بلند روی دفتر است.",
+          "transliteration": "medad-e boland roo-ye daftar ast",
+          "english": "The long pencil is on the notebook.",
+          "id": "pattern_3_ex_4",
+          "audio": null
+        },
+        {
+          "farsi": "دفتر بزرگ در کیف است.",
+          "transliteration": "daftar-e bozorg dar kif ast",
+          "english": "The big notebook is in the bag.",
+          "id": "pattern_3_ex_5",
+          "audio": null
+        },
+        {
+          "farsi": "کیف قدیمی روی میز است.",
+          "transliteration": "kif-e qadimi roo-ye miz ast",
+          "english": "The old bag is on the table.",
+          "id": "pattern_3_ex_6",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "pattern_4",
+      "label": "Pattern 4 — X در Y است (X is in/at Y)",
+      "farsi": "[noun] در [place] است.",
+      "transliteration": "[noun] dar [place] ast",
+      "english": "___ is in/at the ___.",
+      "grammar_note": "در (dar) as a preposition means 'in' or 'at'. It is written and pronounced the same as در (dar) meaning 'door' from lesson 1. Context alone distinguishes the two: در کلاس = in the classroom (preposition); این در است = this is a door (noun).",
+      "examples": [
+        {
+          "farsi": "پسر در مدرسه است.",
+          "transliteration": "pesar dar madrese ast",
+          "english": "The boy is at school.",
+          "id": "pattern_4_ex_1",
+          "audio": null
+        },
+        {
+          "farsi": "دختر در کلاس است.",
+          "transliteration": "dokhtar dar kelas ast",
+          "english": "The girl is in the classroom.",
+          "id": "pattern_4_ex_2",
+          "audio": null
+        },
+        {
+          "farsi": "کیف در کلاس است.",
+          "transliteration": "kif dar kelas ast",
+          "english": "The bag is in the classroom.",
+          "id": "pattern_4_ex_3",
+          "audio": null
+        },
+        {
+          "farsi": "مداد در کیف است.",
+          "transliteration": "medad dar kif ast",
+          "english": "The pencil is in the bag.",
+          "id": "pattern_4_ex_4",
+          "audio": null
+        },
+        {
+          "farsi": "دختر کوچک در اتاق است.",
+          "transliteration": "dokhtar-e kuchak dar otaq ast",
+          "english": "The little girl is in the room.",
+          "id": "pattern_4_ex_5",
+          "audio": null
+        },
+        {
+          "farsi": "پسر کوچک در خانه است.",
+          "transliteration": "pesar-e kuchak dar khane ast",
+          "english": "The little boy is at home.",
+          "id": "pattern_4_ex_6",
+          "audio": null
+        },
+        {
+          "farsi": "زن جوان در خانه است.",
+          "transliteration": "zan-e javan dar khane ast",
+          "english": "The young woman is at home.",
+          "id": "pattern_4_ex_7",
+          "audio": null
+        },
+        {
+          "farsi": "مرد پیر در اتاق است.",
+          "transliteration": "mard-e pir dar otaq ast",
+          "english": "The old man is in the room.",
+          "id": "pattern_4_ex_8",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "pattern_5",
+      "label": "Pattern 5 — Possession: این [noun] [pronoun] است",
+      "farsi": "این [noun] [pronoun] است.",
+      "transliteration": "in [noun]-e [pronoun] ast",
+      "english": "This ___ is mine/yours/his…",
+      "grammar_note": "To express possession, the possessive pronoun follows the noun directly, linked by ezafe. Example: این کتاب من است [in ketab-e man ast] = This book is mine.",
+      "pronouns_table": [
+        {
+          "farsi": "من",
+          "transliteration": "man",
+          "english": "I / me / my"
+        },
+        {
+          "farsi": "تو",
+          "transliteration": "to",
+          "english": "you / your (informal)"
+        },
+        {
+          "farsi": "او",
+          "transliteration": "u",
+          "english": "he/she / him/her / his or her"
+        },
+        {
+          "farsi": "ما",
+          "transliteration": "ma",
+          "english": "we / us / our"
+        },
+        {
+          "farsi": "شما",
+          "transliteration": "shoma",
+          "english": "you / your (formal or plural)"
+        },
+        {
+          "farsi": "آنها",
+          "transliteration": "anha",
+          "english": "they / them / their"
+        }
+      ],
+      "examples": [
+        {
+          "farsi": "این کتاب من است.",
+          "transliteration": "in ketab-e man ast",
+          "english": "This book is mine.",
+          "id": "pattern_5_ex_1",
+          "audio": null
+        },
+        {
+          "farsi": "این کتاب تو است.",
+          "transliteration": "in ketab-e to ast",
+          "english": "This book is yours.",
+          "id": "pattern_5_ex_2",
+          "audio": null
+        },
+        {
+          "farsi": "این کتاب او است.",
+          "transliteration": "in ketab-e u ast",
+          "english": "This book is his or hers.",
+          "id": "pattern_5_ex_3",
+          "audio": null
+        },
+        {
+          "farsi": "این کتاب ما است.",
+          "transliteration": "in ketab-e ma ast",
+          "english": "This book is ours.",
+          "id": "pattern_5_ex_4",
+          "audio": null
+        },
+        {
+          "farsi": "این کتاب شما است.",
+          "transliteration": "in ketab-e shoma ast",
+          "english": "This book is yours (formal/plural).",
+          "id": "pattern_5_ex_5",
+          "audio": null
+        },
+        {
+          "farsi": "این کتاب آنها است.",
+          "transliteration": "in ketab-e anha ast",
+          "english": "This book is theirs.",
+          "id": "pattern_5_ex_6",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "pattern_6",
+      "label": "Pattern 6 — Full Noun Phrase: Noun + Adjective + Pronoun",
+      "farsi": "این [noun]-ِ [adjective]-ِ [pronoun] است.",
+      "transliteration": "in [noun]-e [adj]-e [pronoun] ast",
+      "english": "This [adj] [noun] is mine/yours/his…",
+      "grammar_note": "Multiple ezafe links chain noun → adjective → possessive into a single noun phrase. Each link uses the same -e connector.",
+      "examples": [
+        {
+          "farsi": "این کتاب بزرگ من است.",
+          "transliteration": "in ketab-e bozorg-e man ast",
+          "english": "This big book is mine.",
+          "id": "pattern_6_ex_1",
+          "audio": null
+        },
+        {
+          "farsi": "کتاب بزرگ من روی میز است.",
+          "transliteration": "ketab-e bozorg-e man roo-ye miz ast",
+          "english": "My big book is on the table.",
+          "id": "pattern_6_ex_2",
+          "audio": null
+        },
+        {
+          "farsi": "این دفتر بزرگ او است.",
+          "transliteration": "in daftar-e bozorg-e u ast",
+          "english": "This big notebook is his or hers.",
+          "id": "pattern_6_ex_3",
+          "audio": null
+        },
+        {
+          "farsi": "دفتر بزرگ او در کیف است.",
+          "transliteration": "daftar-e bozorg-e u dar kif ast",
+          "english": "His or her big notebook is in the bag.",
+          "id": "pattern_6_ex_4",
+          "audio": null
+        },
+        {
+          "farsi": "این مداد کوچک تو است.",
+          "transliteration": "in medad-e kuchak-e to ast",
+          "english": "This small pencil is yours.",
+          "id": "pattern_6_ex_5",
+          "audio": null
+        },
+        {
+          "farsi": "مداد کوچک تو زیر کتاب است.",
+          "transliteration": "medad-e kuchak-e to zir-e ketab ast",
+          "english": "Your small pencil is under the book.",
+          "id": "pattern_6_ex_6",
+          "audio": null
+        },
+        {
+          "farsi": "استاد جوان ما در کلاس است.",
+          "transliteration": "ostad-e javan-e ma dar kelas ast",
+          "english": "Our young professor is in the classroom.",
+          "id": "pattern_6_ex_7",
+          "audio": null
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ],
+  "vocabulary": {
+    "nouns_objects": [
+      {
+        "farsi": "کیف",
+        "transliteration": "kif",
+        "english": "bag",
+        "id": "vocab_201",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "کتاب",
+        "transliteration": "ketab",
+        "english": "book",
+        "id": "vocab_202",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy",
+        "note": "Review from lesson 1"
+      },
+      {
+        "farsi": "دفتر",
+        "transliteration": "daftar",
+        "english": "notebook",
+        "id": "vocab_203",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy",
+        "note": "Review from lesson 1"
+      },
+      {
+        "farsi": "مداد",
+        "transliteration": "medad",
+        "english": "pencil",
+        "id": "vocab_204",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy",
+        "note": "Review from lesson 1"
+      },
+      {
+        "farsi": "قلم",
+        "transliteration": "qalam",
+        "english": "pen",
+        "id": "vocab_205",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy",
+        "note": "Review from lesson 1"
+      },
+      {
+        "farsi": "میز",
+        "transliteration": "miz",
+        "english": "table / desk",
+        "id": "vocab_206",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy",
+        "note": "Review from lesson 1"
+      }
+    ],
+    "nouns_people": [
+      {
+        "farsi": "پدر",
+        "transliteration": "pedar",
+        "english": "father",
+        "id": "vocab_207",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "مادر",
+        "transliteration": "madar",
+        "english": "mother",
+        "id": "vocab_208",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "همسر",
+        "transliteration": "hamsar",
+        "english": "spouse / husband / wife",
+        "id": "vocab_209",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "دوست",
+        "transliteration": "dust",
+        "english": "friend",
+        "id": "vocab_210",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "دانش‌آموز",
+        "transliteration": "danesh-amuz",
+        "english": "pupil / school student",
+        "id": "vocab_211",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "دبیر",
+        "transliteration": "dabir",
+        "english": "high school teacher",
+        "id": "vocab_212",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "آموزگار",
+        "transliteration": "amuzegar",
+        "english": "elementary school teacher",
+        "id": "vocab_213",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "خانه‌دار",
+        "transliteration": "khanedar",
+        "english": "homemaker / housewife",
+        "id": "vocab_214",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "آقا",
+        "transliteration": "aqa",
+        "english": "Mr. / sir / gentleman",
+        "id": "vocab_215",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "خانم",
+        "transliteration": "khanom",
+        "english": "Mrs. / Ms. / lady",
+        "id": "vocab_216",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      }
+    ],
+    "nouns_places": [
+      {
+        "farsi": "کلاس",
+        "transliteration": "kelas",
+        "english": "classroom / class",
+        "id": "vocab_217",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "مدرسه",
+        "transliteration": "madrese",
+        "english": "school",
+        "id": "vocab_218",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy",
+        "note": "Review from lesson 1"
+      },
+      {
+        "farsi": "دبیرستان",
+        "transliteration": "dabirestan",
+        "english": "high school",
+        "id": "vocab_219",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "دبستان",
+        "transliteration": "dabestan",
+        "english": "elementary school / primary school",
+        "id": "vocab_220",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "خانه",
+        "transliteration": "khane",
+        "english": "house / home",
+        "id": "vocab_221",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy",
+        "note": "Review from lesson 1"
+      },
+      {
+        "farsi": "اتاق",
+        "transliteration": "otaq",
+        "english": "room",
+        "id": "vocab_222",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy",
+        "note": "Review from lesson 1"
+      }
+    ],
+    "function_words": [
+      {
+        "farsi": "روی",
+        "transliteration": "roo",
+        "english": "on / on top of (preposition)",
+        "id": "vocab_223",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "زیر",
+        "transliteration": "zir",
+        "english": "under / below (preposition)",
+        "id": "vocab_224",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "در",
+        "transliteration": "dar",
+        "english": "in / at (preposition)",
+        "id": "vocab_225",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy",
+        "note": "Homograph with در (dar) = door from lesson 1. Different vowel in speech."
+      },
+      {
+        "farsi": "و",
+        "transliteration": "va",
+        "english": "and (conjunction)",
+        "id": "vocab_226",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "اینجا",
+        "transliteration": "inja",
+        "english": "here",
+        "id": "vocab_227",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "اسم",
+        "transliteration": "esm",
+        "english": "name",
+        "id": "vocab_228",
+        "audio": null,
+        "image": null,
+        "difficulty": "easy"
+      }
+    ],
+    "pronouns": [
+      {
+        "farsi": "من",
+        "transliteration": "man",
+        "english": "I / me / my",
+        "id": "vocab_229",
+        "audio": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "تو",
+        "transliteration": "to",
+        "english": "you / your (informal singular)",
+        "id": "vocab_230",
+        "audio": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "او",
+        "transliteration": "u",
+        "english": "he / she / him / her / his / her",
+        "id": "vocab_231",
+        "audio": null,
+        "difficulty": "easy",
+        "note": "Persian has no gender distinction in pronouns."
+      },
+      {
+        "farsi": "ما",
+        "transliteration": "ma",
+        "english": "we / us / our",
+        "id": "vocab_232",
+        "audio": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "شما",
+        "transliteration": "shoma",
+        "english": "you / your (formal or plural)",
+        "id": "vocab_233",
+        "audio": null,
+        "difficulty": "easy"
+      },
+      {
+        "farsi": "آنها",
+        "transliteration": "anha",
+        "english": "they / them / their",
+        "id": "vocab_234",
+        "audio": null,
+        "difficulty": "easy"
+      }
+    ],
+    "subject_vocab": [
+      {
+        "farsi": "فیزیک",
+        "transliteration": "fizik",
+        "english": "physics",
+        "id": "vocab_235",
+        "audio": null,
+        "difficulty": "easy"
+      }
+    ]
+  },
+  "adjectives": [
+    {
+      "farsi": "نو",
+      "transliteration": "no",
+      "english": "new",
+      "opposite": {
+        "farsi": "کهنه",
+        "transliteration": "kohne",
+        "english": "old (things)",
+        "id": "vocab_237",
+        "audio": null,
+        "image": null
+      },
+      "id": "vocab_236",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    },
+    {
+      "farsi": "روشن",
+      "transliteration": "roshan",
+      "english": "bright / lit / light",
+      "opposite": {
+        "farsi": "تاریک",
+        "transliteration": "tarik",
+        "english": "dark",
+        "id": "vocab_239",
+        "audio": null,
+        "image": null
+      },
+      "id": "vocab_238",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    },
+    {
+      "farsi": "ساده",
+      "transliteration": "sade",
+      "english": "simple / plain",
+      "id": "vocab_240",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy"
+    },
+    {
+      "farsi": "بزرگ",
+      "transliteration": "bozorg",
+      "english": "big / large",
+      "id": "vocab_241",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy",
+      "note": "Review from lesson 1"
+    },
+    {
+      "farsi": "کوچک",
+      "transliteration": "kuchak",
+      "english": "small / little",
+      "id": "vocab_242",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy",
+      "note": "Review from lesson 1"
+    },
+    {
+      "farsi": "بلند",
+      "transliteration": "boland",
+      "english": "tall / long",
+      "id": "vocab_243",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy",
+      "note": "Review from lesson 1"
+    },
+    {
+      "farsi": "کوتاه",
+      "transliteration": "kutah",
+      "english": "short",
+      "id": "vocab_244",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy",
+      "note": "Review from lesson 1"
+    },
+    {
+      "farsi": "سنگین",
+      "transliteration": "sangin",
+      "english": "heavy",
+      "id": "vocab_245",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy",
+      "note": "Review from lesson 1"
+    },
+    {
+      "farsi": "سبک",
+      "transliteration": "sabok",
+      "english": "light (weight)",
+      "id": "vocab_246",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy",
+      "note": "Review from lesson 1"
+    },
+    {
+      "farsi": "زیبا",
+      "transliteration": "ziba",
+      "english": "beautiful",
+      "id": "vocab_247",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy",
+      "note": "Review from lesson 1"
+    },
+    {
+      "farsi": "قدیمی",
+      "transliteration": "qadimi",
+      "english": "old / antique (for objects/places)",
+      "id": "vocab_248",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy",
+      "note": "Review from lesson 1"
+    },
+    {
+      "farsi": "جوان",
+      "transliteration": "javan",
+      "english": "young",
+      "id": "vocab_249",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy",
+      "note": "Review from lesson 1"
+    },
+    {
+      "farsi": "پیر",
+      "transliteration": "pir",
+      "english": "old (person)",
+      "id": "vocab_250",
+      "audio": null,
+      "image": null,
+      "difficulty": "easy",
+      "note": "Review from lesson 1"
+    }
+  ],
+  "reading_texts": [
+    {
+      "id": "text_1",
+      "title": "متن — خانواده پرویز",
+      "title_english": "Reading Text — Parviz's Family",
+      "sentences": [
+        {
+          "farsi": "این مرد، پرویز است.",
+          "transliteration": "in mard, parviz ast",
+          "english": "This man is Parviz.",
+          "id": "text_1_sent_1",
+          "audio": null
+        },
+        {
+          "farsi": "پرویز پدر کاوه و ژاله است.",
+          "transliteration": "parviz pedar-e kaveh va zhale ast",
+          "english": "Parviz is the father of Kaveh and Zhale.",
+          "id": "text_1_sent_2",
+          "audio": null
+        },
+        {
+          "farsi": "کاوه پسر پرویز است.",
+          "transliteration": "kaveh pesar-e parviz ast",
+          "english": "Kaveh is Parviz's son.",
+          "id": "text_1_sent_3",
+          "audio": null
+        },
+        {
+          "farsi": "ژاله دختر پرویز است.",
+          "transliteration": "zhale dokhtar-e parviz ast",
+          "english": "Zhale is Parviz's daughter.",
+          "id": "text_1_sent_4",
+          "audio": null
+        },
+        {
+          "farsi": "اسم مادر کاوه و ژاله، پروین است.",
+          "transliteration": "esm-e madar-e kaveh va zhale, parvin ast",
+          "english": "The name of Kaveh and Zhale's mother is Parvin.",
+          "id": "text_1_sent_5",
+          "audio": null
+        },
+        {
+          "farsi": "پروین خانه‌دار است.",
+          "transliteration": "parvin khanedar ast",
+          "english": "Parvin is a homemaker.",
+          "id": "text_1_sent_6",
+          "audio": null
+        },
+        {
+          "farsi": "پروین همسر پرویز است.",
+          "transliteration": "parvin hamsar-e parviz ast",
+          "english": "Parvin is Parviz's wife.",
+          "id": "text_1_sent_7",
+          "audio": null
+        },
+        {
+          "farsi": "کاوه دانش‌آموز است.",
+          "transliteration": "kaveh danesh-amuz ast",
+          "english": "Kaveh is a student.",
+          "id": "text_1_sent_8",
+          "audio": null
+        },
+        {
+          "farsi": "او دانش‌آموز دبیرستان است.",
+          "transliteration": "u danesh-amuz-e dabirestan ast",
+          "english": "He is a high school student.",
+          "id": "text_1_sent_9",
+          "audio": null
+        },
+        {
+          "farsi": "اینجا کلاس کاوه است.",
+          "transliteration": "inja kelas-e kaveh ast",
+          "english": "This is Kaveh's classroom.",
+          "id": "text_1_sent_10",
+          "audio": null
+        },
+        {
+          "farsi": "این دبیر کاوه است.",
+          "transliteration": "in dabir-e kaveh ast",
+          "english": "This is Kaveh's teacher.",
+          "id": "text_1_sent_11",
+          "audio": null
+        },
+        {
+          "farsi": "اسم دبیر کاوه، آقای مجیدی است.",
+          "transliteration": "esm-e dabir-e kaveh, aqa-ye majidi ast",
+          "english": "The name of Kaveh's teacher is Mr. Majidi.",
+          "id": "text_1_sent_12",
+          "audio": null
+        },
+        {
+          "farsi": "آقای مجیدی دبیر فیزیک است.",
+          "transliteration": "aqa-ye majidi dabir-e fizik ast",
+          "english": "Mr. Majidi is a physics teacher.",
+          "id": "text_1_sent_13",
+          "audio": null
+        },
+        {
+          "farsi": "این پسر دوست کاوه است.",
+          "transliteration": "in pesar dust-e kaveh ast",
+          "english": "This boy is Kaveh's friend.",
+          "id": "text_1_sent_14",
+          "audio": null
+        },
+        {
+          "farsi": "اسم دوست کاوه دارا است.",
+          "transliteration": "esm-e dust-e kaveh dara ast",
+          "english": "The name of Kaveh's friend is Dara.",
+          "id": "text_1_sent_15",
+          "audio": null
+        },
+        {
+          "farsi": "ژاله دانش‌آموز است.",
+          "transliteration": "zhale danesh-amuz ast",
+          "english": "Zhale is a student.",
+          "id": "text_1_sent_16",
+          "audio": null
+        },
+        {
+          "farsi": "او دانش‌آموز دبستان است.",
+          "transliteration": "u danesh-amuz-e dabestan ast",
+          "english": "She is a primary school student.",
+          "id": "text_1_sent_17",
+          "audio": null
+        },
+        {
+          "farsi": "اینجا کلاس ژاله است.",
+          "transliteration": "inja kelas-e zhale ast",
+          "english": "This is Zhale's classroom.",
+          "id": "text_1_sent_18",
+          "audio": null
+        },
+        {
+          "farsi": "این آموزگار ژاله است.",
+          "transliteration": "in amuzegar-e zhale ast",
+          "english": "This is Zhale's teacher.",
+          "id": "text_1_sent_19",
+          "audio": null
+        },
+        {
+          "farsi": "اسم آموزگار ژاله خانم امینی است.",
+          "transliteration": "esm-e amuzegar-e zhale khanom-e amini ast",
+          "english": "The name of Zhale's teacher is Mrs. Amini.",
+          "id": "text_1_sent_20",
+          "audio": null
+        },
+        {
+          "farsi": "خانم امینی، آموزگار ژاله است.",
+          "transliteration": "khanom-e amini, amuzegar-e zhale ast",
+          "english": "Mrs. Amini is Zhale's teacher.",
+          "id": "text_1_sent_21",
+          "audio": null
+        },
+        {
+          "farsi": "این دختر، دوست ژاله است.",
+          "transliteration": "in dokhtar, dust-e zhale ast",
+          "english": "This girl is Zhale's friend.",
+          "id": "text_1_sent_22",
+          "audio": null
+        },
+        {
+          "farsi": "اسم دوست ژاله، سارا است.",
+          "transliteration": "esm-e dust-e zhale, sara ast",
+          "english": "The name of Zhale's friend is Sara.",
+          "id": "text_1_sent_23",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "text_2",
+      "title": "جملات دیکته — Negation & Contrast",
+      "title_english": "Dictation sentences — Negation and Contrast",
+      "sentences": [
+        {
+          "farsi": "کتاب من نو است.",
+          "transliteration": "ketab-e man no ast",
+          "english": "My book is new.",
+          "id": "text_2_sent_1",
+          "audio": null
+        },
+        {
+          "farsi": "کتاب تو نو نیست.",
+          "transliteration": "ketab-e to no nist",
+          "english": "Your book is not new.",
+          "id": "text_2_sent_2",
+          "audio": null
+        },
+        {
+          "farsi": "کتاب تو کهنه است.",
+          "transliteration": "ketab-e to kohne ast",
+          "english": "Your book is old.",
+          "id": "text_2_sent_3",
+          "audio": null
+        },
+        {
+          "farsi": "اتاق آنها روشن است.",
+          "transliteration": "otaq-e anha roshan ast",
+          "english": "Their room is bright.",
+          "id": "text_2_sent_4",
+          "audio": null
+        },
+        {
+          "farsi": "اتاق شما روشن نیست.",
+          "transliteration": "otaq-e shoma roshan nist",
+          "english": "Your room is not bright.",
+          "id": "text_2_sent_5",
+          "audio": null
+        },
+        {
+          "farsi": "اتاق شما تاریک است.",
+          "transliteration": "otaq-e shoma tarik ast",
+          "english": "Your room is dark.",
+          "id": "text_2_sent_6",
+          "audio": null
+        },
+        {
+          "farsi": "این خانه نو و زیبا است.",
+          "transliteration": "in khane no va ziba ast",
+          "english": "This house is new and beautiful.",
+          "id": "text_2_sent_7",
+          "audio": null
+        },
+        {
+          "farsi": "آن اتاق ساده است.",
+          "transliteration": "an otaq sade ast",
+          "english": "That room is simple.",
+          "id": "text_2_sent_8",
+          "audio": null
+        }
+      ],
+      "difficulty": "easy"
+    }
+  ],
+  "summary": {
+    "title": "خلاصه",
+    "title_english": "Summary",
+    "sentence_structures": [
+      {
+        "type": "Location with روی",
+        "structure_farsi": "[noun] + روی + [noun] + است",
+        "example_farsi": "کتاب بزرگ روی میز است.",
+        "example_english": "The big book is on the table."
+      },
+      {
+        "type": "Possession: این [noun] [pronoun] است",
+        "structure_farsi": "این + [noun] + [pronoun] + است",
+        "example_farsi": "این کتاب من است.",
+        "example_english": "This book is mine."
+      },
+      {
+        "type": "Possession with adjective",
+        "structure_farsi": "[noun]-ِ [adj]-ِ [pronoun] + است",
+        "example_farsi": "کتاب بزرگ من روی میز است.",
+        "example_english": "My big book is on the table."
+      },
+      {
+        "type": "Name / title construction",
+        "structure_farsi": "اسم + [noun]-ِ [name] + [name] + است",
+        "example_farsi": "اسم آموزگار ژاله خانم امینی است.",
+        "example_english": "The name of Zhale's teacher is Mrs. Amini."
+      }
+    ],
+    "vocabulary_groups": {
+      "prepositions": [
+        "روی",
+        "زیر",
+        "در"
+      ],
+      "pronouns": [
+        "من",
+        "تو",
+        "او",
+        "ما",
+        "شما",
+        "آنها"
+      ],
+      "family": [
+        "پدر",
+        "مادر",
+        "همسر"
+      ],
+      "school_roles": [
+        "دانش‌آموز",
+        "دبیر",
+        "آموزگار",
+        "خانه‌دار",
+        "دوست"
+      ],
+      "school_places": [
+        "کلاس",
+        "مدرسه",
+        "دبیرستان",
+        "دبستان"
+      ],
+      "titles": [
+        "آقا",
+        "خانم"
+      ],
+      "adjectives_new": [
+        "نو",
+        "کهنه",
+        "روشن",
+        "تاریک",
+        "ساده"
+      ],
+      "conjunctions": [
+        "و"
+      ],
+      "adverbs": [
+        "اینجا"
+      ],
+      "nouns_new": [
+        "کیف",
+        "اسم",
+        "فیزیک"
+      ]
+    }
+  },
+  "dictation_section": {
+    "title": "دیکته و رسم‌الخط",
+    "title_english": "Dictation and Writing",
+    "letter": "و",
+    "phoneme_note": "The letter و (vav) can be pronounced in three different ways depending on context:",
+    "sound_groups": [
+      {
+        "sound": "o",
+        "description": "short 'o' vowel sound (as in 'top')",
+        "examples": [
+          {
+            "farsi": "تو",
+            "transliteration": "to",
+            "english": "you"
+          },
+          {
+            "farsi": "نو",
+            "transliteration": "no",
+            "english": "new"
+          },
+          {
+            "farsi": "روشن",
+            "transliteration": "roshan",
+            "english": "bright"
+          },
+          {
+            "farsi": "گوجه",
+            "transliteration": "goje",
+            "english": "tomato"
+          }
+        ]
+      },
+      {
+        "sound": "v",
+        "description": "consonant 'v' sound (as in 'very')",
+        "examples": [
+          {
+            "farsi": "جوان",
+            "transliteration": "javan",
+            "english": "young"
+          },
+          {
+            "farsi": "و",
+            "transliteration": "va",
+            "english": "and"
+          },
+          {
+            "farsi": "کاوه",
+            "transliteration": "kaveh",
+            "english": "Kaveh (name)"
+          },
+          {
+            "farsi": "پرویز",
+            "transliteration": "parviz",
+            "english": "Parviz (name)"
+          }
+        ]
+      },
+      {
+        "sound": "u",
+        "description": "long 'u' vowel sound (as in 'moon')",
+        "examples": [
+          {
+            "farsi": "کوچک",
+            "transliteration": "kuchak",
+            "english": "small"
+          },
+          {
+            "farsi": "روی",
+            "transliteration": "roo",
+            "english": "on / on top of"
+          },
+          {
+            "farsi": "دوست",
+            "transliteration": "dust",
+            "english": "friend"
+          },
+          {
+            "farsi": "آموزگار",
+            "transliteration": "amuzegar",
+            "english": "teacher (elementary)"
+          }
+        ]
+      }
+    ]
+  },
+  "named_characters": [
+    {
+      "name_farsi": "پرویز",
+      "name_transliteration": "parviz",
+      "gender": "male",
+      "role": "father of Kaveh and Zhale"
+    },
+    {
+      "name_farsi": "پروین",
+      "name_transliteration": "parvin",
+      "gender": "female",
+      "role": "mother of Kaveh and Zhale; Parviz's wife; homemaker"
+    },
+    {
+      "name_farsi": "کاوه",
+      "name_transliteration": "kaveh",
+      "gender": "male",
+      "role": "high school student; son of Parviz and Parvin"
+    },
+    {
+      "name_farsi": "ژاله",
+      "name_transliteration": "zhale",
+      "gender": "female",
+      "role": "primary school student; daughter of Parviz and Parvin"
+    },
+    {
+      "name_farsi": "آقای مجیدی",
+      "name_transliteration": "aqa-ye majidi",
+      "gender": "male",
+      "role": "Kaveh's physics teacher (high school)"
+    },
+    {
+      "name_farsi": "خانم امینی",
+      "name_transliteration": "khanom-e amini",
+      "gender": "female",
+      "role": "Zhale's teacher (primary school)"
+    },
+    {
+      "name_farsi": "دارا",
+      "name_transliteration": "dara",
+      "gender": "male",
+      "role": "Kaveh's friend"
+    },
+    {
+      "name_farsi": "سارا",
+      "name_transliteration": "sara",
+      "gender": "female",
+      "role": "Zhale's friend"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "fill_blank",
+      "id": "ex_fb_201",
+      "question_farsi": "کتاب ___ میز است.",
+      "question_english": "The book is on the table.",
+      "answer_farsi": "روی",
+      "answer_transliteration": "roo-ye",
+      "answer_english": "on",
+      "options": [
+        "روی",
+        "زیر",
+        "در",
+        "است"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "type": "fill_blank",
+      "id": "ex_fb_202",
+      "question_farsi": "دفتر ___ میز است.",
+      "question_english": "The notebook is under the table.",
+      "answer_farsi": "زیر",
+      "answer_transliteration": "zir-e",
+      "answer_english": "under",
+      "options": [
+        "زیر",
+        "روی",
+        "و",
+        "در"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "type": "fill_blank",
+      "id": "ex_fb_203",
+      "question_farsi": "پسر ___ مدرسه است.",
+      "question_english": "The boy is at school.",
+      "answer_farsi": "در",
+      "answer_transliteration": "dar",
+      "answer_english": "at / in",
+      "options": [
+        "در",
+        "روی",
+        "زیر",
+        "است"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "type": "fill_blank",
+      "id": "ex_fb_204",
+      "question_farsi": "این کتاب ___ است.",
+      "question_english": "This book is mine.",
+      "answer_farsi": "من",
+      "answer_transliteration": "man",
+      "answer_english": "mine (my)",
+      "options": [
+        "من",
+        "او",
+        "کیف",
+        "روی"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "type": "fill_blank",
+      "id": "ex_fb_205",
+      "question_farsi": "کتاب من نو ___.",
+      "question_english": "My book is not new.",
+      "answer_farsi": "نیست",
+      "answer_transliteration": "nist",
+      "answer_english": "is not",
+      "options": [
+        "نیست",
+        "است",
+        "روی",
+        "زیر"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "type": "mcq",
+      "id": "ex_mcq_201",
+      "difficulty": "easy",
+      "question": {
+        "english": "What does کیف mean?"
+      },
+      "options": [
+        {
+          "english": "bag"
+        },
+        {
+          "english": "book"
+        },
+        {
+          "english": "table"
+        },
+        {
+          "english": "room"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "type": "mcq",
+      "id": "ex_mcq_202",
+      "difficulty": "easy",
+      "question": {
+        "english": "Which pronoun means 'they / their' in Persian?"
+      },
+      "options": [
+        {
+          "farsi": "ما"
+        },
+        {
+          "farsi": "شما"
+        },
+        {
+          "farsi": "آنها"
+        },
+        {
+          "farsi": "او"
+        }
+      ],
+      "correct_index": 2
+    },
+    {
+      "type": "mcq",
+      "id": "ex_mcq_203",
+      "difficulty": "easy",
+      "question": {
+        "farsi": "دفتر بزرگ او در کیف است.",
+        "english": "What does this sentence mean?"
+      },
+      "options": [
+        {
+          "english": "His or her big notebook is in the bag."
+        },
+        {
+          "english": "The big notebook is on the bag."
+        },
+        {
+          "english": "His or her small notebook is under the bag."
+        },
+        {
+          "english": "The bag is in the notebook."
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "type": "mcq",
+      "id": "ex_mcq_204",
+      "difficulty": "medium",
+      "question": {
+        "english": "What is the difference between دبیر and آموزگار?"
+      },
+      "options": [
+        {
+          "english": "دبیر is a high school teacher; آموزگار is a primary school teacher."
+        },
+        {
+          "english": "دبیر is a professor; آموزگار is a high school teacher."
+        },
+        {
+          "english": "They are the same word."
+        },
+        {
+          "english": "دبیر is a student; آموزگار is a teacher."
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "type": "matching",
+      "id": "ex_match_201",
+      "instruction": "Match the Persian preposition to its English meaning.",
+      "pairs": [
+        {
+          "farsi": "روی",
+          "english": "on top of"
+        },
+        {
+          "farsi": "زیر",
+          "english": "under"
+        },
+        {
+          "farsi": "در",
+          "english": "in / at"
+        },
+        {
+          "farsi": "و",
+          "english": "and"
+        },
+        {
+          "farsi": "اینجا",
+          "english": "here"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "type": "matching",
+      "id": "ex_match_202",
+      "instruction": "Match the Persian pronoun to its English equivalent.",
+      "pairs": [
+        {
+          "farsi": "من",
+          "english": "I / me / my"
+        },
+        {
+          "farsi": "تو",
+          "english": "you (informal)"
+        },
+        {
+          "farsi": "او",
+          "english": "he / she"
+        },
+        {
+          "farsi": "ما",
+          "english": "we / our"
+        },
+        {
+          "farsi": "شما",
+          "english": "you (formal/plural)"
+        },
+        {
+          "farsi": "آنها",
+          "english": "they / their"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "type": "rearrange",
+      "id": "ex_rearrange_201",
+      "instruction": "Put the words in the correct order.",
+      "words_farsi": [
+        "است",
+        "میز",
+        "روی",
+        "کتاب"
+      ],
+      "correct_sentence_farsi": "کتاب روی میز است.",
+      "correct_sentence_english": "The book is on the table.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "rearrange",
+      "id": "ex_rearrange_202",
+      "instruction": "Put the words in the correct order.",
+      "words_farsi": [
+        "است",
+        "من",
+        "کتاب",
+        "این"
+      ],
+      "correct_sentence_farsi": "این کتاب من است.",
+      "correct_sentence_english": "This book is mine.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "rearrange",
+      "id": "ex_rearrange_203",
+      "instruction": "Put the words in the correct order.",
+      "words_farsi": [
+        "است",
+        "کیف",
+        "در",
+        "مداد",
+        "بزرگ"
+      ],
+      "correct_sentence_farsi": "مداد بزرگ در کیف است.",
+      "correct_sentence_english": "The big pencil is in the bag.",
+      "difficulty": "medium"
+    }
+  ]
+}

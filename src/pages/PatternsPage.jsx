@@ -49,8 +49,40 @@ export default function PatternsPage() {
               </span>
             </button>
 
-            {expandedPattern === pIdx && pattern.examples && (
+            {expandedPattern === pIdx && (
               <div className="pattern-card__examples">
+                {/* Grammar note */}
+                {pattern.grammar_note && (
+                  <div className="pattern-card__grammar-note">
+                    <span className="pattern-card__grammar-icon">💡</span>
+                    <span>{pattern.grammar_note}</span>
+                  </div>
+                )}
+
+                {/* Pronouns table (Chapter 2 Pattern 5) */}
+                {pattern.pronouns_table && (
+                  <div className="pattern-card__pronouns-table">
+                    <table className="pronouns-table">
+                      <thead>
+                        <tr>
+                          <th>فارسی</th>
+                          <th>Transliteration</th>
+                          <th>English</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {pattern.pronouns_table.map((pronoun, prIdx) => (
+                          <tr key={prIdx}>
+                            <td className="pronouns-table__farsi" dir="rtl">{pronoun.farsi}</td>
+                            <td className="pronouns-table__translit">{pronoun.transliteration}</td>
+                            <td className="pronouns-table__english">{pronoun.english}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
                 {/* Handle regular examples */}
                 {pattern.examples.filter(ex => !ex.type).map((example) => {
                   const englishWord = example.english?.replace(/^(This|That) is (a |an )?/, '').replace('.', '').trim();

@@ -40,6 +40,8 @@ export default function ReadingPage() {
       ...(chapter.vocabulary?.nouns_people || []),
       ...(chapter.vocabulary?.nouns_places || []),
       ...(chapter.vocabulary?.function_words || []),
+      ...(chapter.vocabulary?.pronouns || []),
+      ...(chapter.vocabulary?.subject_vocab || []),
       ...(chapter.adjectives || []),
     ];
     const found = allVocab.find(v => v.farsi === clean);

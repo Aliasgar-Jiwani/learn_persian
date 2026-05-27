@@ -5,15 +5,19 @@ import { useProgress } from '../hooks/useProgress';
 import VocabCard from '../components/VocabCard';
 import { 
   Package, Users, Home as HomeIcon, Type, Sparkles, 
-  ArrowLeft, ArrowRight, Shuffle, Library, CheckCircle 
+  ArrowLeft, ArrowRight, Shuffle, Library, CheckCircle,
+  User, BookOpen
 } from 'lucide-react';
 import './VocabularyPage.css';
 
-const tabs = [
+// All possible tabs — we filter to only those with data
+const allTabs = [
   { key: 'nouns_objects', label: 'Objects', icon: Package },
   { key: 'nouns_people', label: 'People', icon: Users },
   { key: 'nouns_places', label: 'Places', icon: HomeIcon },
   { key: 'function_words', label: 'Function Words', icon: Type },
+  { key: 'pronouns', label: 'Pronouns', icon: User },
+  { key: 'subject_vocab', label: 'Subjects', icon: BookOpen },
   { key: 'adjectives', label: 'Adjectives', icon: Sparkles },
 ];
 
@@ -24,6 +28,15 @@ export default function VocabularyPage() {
   const [activeTab, setActiveTab] = useState('nouns_objects');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+
+  // Build tabs dynamically based on available data
+  const tabs = useMemo(() => {
+    if (!chapter) return [];
+    return allTabs.filter(tab => {
+      if (tab.key === 'adjectives') return (chapter.adjectives || []).length > 0;
+      return (chapter.vocabulary?.[tab.key] || []).length > 0;
+    });
+  }, [chapter]);
 
   const items = useMemo(() => {
     if (!chapter) return [];

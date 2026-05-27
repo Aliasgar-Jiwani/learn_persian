@@ -69,7 +69,9 @@ export default function SummaryPage() {
           <section className="summary-section">
             <h2 className="summary-section__title">✍️ {chapter.dictation_section.title_english}</h2>
             <p className="summary-section__note">{chapter.dictation_section.phoneme_note}</p>
-            {chapter.dictation_section.spelling_groups.map((group, i) => (
+            
+            {/* Chapter 1 style: spelling_groups */}
+            {chapter.dictation_section.spelling_groups && chapter.dictation_section.spelling_groups.map((group, i) => (
               <div key={i} className="dictation-group">
                 <div className="dictation-group__row">
                   <div className="dictation-group__col">
@@ -91,6 +93,35 @@ export default function SummaryPage() {
                 </div>
               </div>
             ))}
+
+            {/* Chapter 2 style: sound_groups */}
+            {chapter.dictation_section.sound_groups && (
+              <div className="dictation-sounds">
+                <div className="dictation-sounds__letter" dir="rtl">
+                  <span className="dictation-sounds__letter-char">{chapter.dictation_section.letter}</span>
+                </div>
+                <div className="dictation-sounds__groups">
+                  {chapter.dictation_section.sound_groups.map((group, i) => (
+                    <div key={i} className="sound-group">
+                      <div className="sound-group__header">
+                        <span className="sound-group__sound">/{group.sound}/</span>
+                        <span className="sound-group__desc">{group.description}</span>
+                      </div>
+                      <div className="sound-group__examples">
+                        {group.examples.map((ex, j) => (
+                          <div key={j} className="sound-group__example">
+                            <span className="sound-group__farsi" dir="rtl">{ex.farsi}</span>
+                            <span className="sound-group__translit">{ex.transliteration}</span>
+                            <span className="sound-group__english">{ex.english}</span>
+                            <SpeakButton text={ex.farsi} size="small" />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </section>
         )}
 
