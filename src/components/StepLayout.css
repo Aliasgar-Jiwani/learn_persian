@@ -1,0 +1,111 @@
+/* StepLayout.css */
+
+.step-layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200; /* Must be higher than BottomNav (100) */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg); /* Fixed variable name */
+  overflow: hidden;
+}
+
+/* Header (Top Bar) */
+.step-layout__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: white;
+  z-index: 10;
+}
+
+.step-layout__close-btn {
+  color: #afafaf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+  padding: 4px;
+}
+
+.step-layout__close-btn:hover {
+  color: var(--color-text-secondary);
+}
+
+.step-layout__progress-track {
+  flex: 1;
+  height: 16px;
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.step-layout__progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-correct);
+  border-radius: 8px;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.step-layout__progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+/* Main Content Area */
+.step-layout__content {
+  flex: 1;
+  min-height: 0; /* Critical for flexbox scrolling to work and not push the footer */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.step-layout__content-inner {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: stepFadeIn 0.3s ease-out;
+}
+
+@keyframes stepFadeIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Footer (Bottom Action Bar) */
+.step-layout__footer {
+  padding: 16px 20px;
+  padding-bottom: max(16px, env(safe-area-inset-bottom)); /* Support iOS home indicator */
+  background: white;
+  border-top: 2px solid var(--color-border);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0; /* Ensure the footer never gets squished or pushed out */
+}
+
+.step-layout__footer .btn-duo {
+  width: 100%;
+  max-width: 600px;
+}

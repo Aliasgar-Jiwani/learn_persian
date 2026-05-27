@@ -1,277 +1,231 @@
+/* SummaryPage.css */
+
 .summary-page {
-  padding-bottom: 100px;
-}
-
-/* Header */
-.summary-page__header {
-  position: relative;
-  padding: 40px 24px 60px;
-  text-align: center;
-}
-
-.summary-page__header-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: var(--color-primary-light);
-  border-radius: 0 0 40px 40px;
-  z-index: -1;
-}
-
-.summary-page__back {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  color: var(--color-primary-dark);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: var(--space-lg);
-  padding: 8px 16px;
-  background: rgba(255,255,255,0.5);
-  border-radius: var(--radius-full);
-  transition: all 0.2s;
-}
-
-.summary-page__back:hover {
-  background: white;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
-}
-
-.summary-page__title {
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: var(--color-primary-dark);
-  margin-bottom: var(--space-xs);
-}
-
-.summary-page__subtitle {
-  font-family: 'Vazirmatn', sans-serif;
-  font-size: 1.25rem;
-  color: var(--color-primary);
-  font-weight: 600;
-}
-
-.summary-page__content {
-  padding: 20px;
-  max-width: 700px;
+  padding-bottom: 40px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
-/* Sections */
-.summary-section {
+.summary-page__header {
+  text-align: center;
   margin-bottom: 32px;
 }
 
-.summary-section__title {
-  font-size: 1.2rem;
-  font-weight: 800;
+.summary-page__title {
+  font-size: 2rem;
   color: var(--color-text);
-  margin-bottom: 16px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--color-primary-light);
+  margin-bottom: 8px;
 }
 
-.summary-section__note {
-  font-size: 0.9rem;
+.summary-page__subtitle {
+  font-size: 1.2rem;
   color: var(--color-text-secondary);
-  margin-bottom: 16px;
-  line-height: 1.6;
 }
 
-/* Structure Cards */
+.summary-page__content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.summary-section {
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: 32px 24px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.summary-section__title {
+  font-size: 1.5rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed var(--color-border);
+}
+
+/* Sentence Structures */
 .summary-section__grid {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  gap: 24px;
 }
 
 .structure-card {
-  background: white;
+  padding: 20px;
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
-  border-radius: 14px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  transition: all 0.2s;
-}
-
-.structure-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  position: relative;
 }
 
 .structure-card__type {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
   color: var(--color-secondary);
+  margin-bottom: 12px;
 }
 
 .structure-card__formula {
+  font-size: 1.5rem;
   font-family: 'Vazirmatn', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--color-text);
-  padding: 6px 10px;
-  background: var(--color-primary-light);
-  border-radius: 8px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  text-align: right;
 }
 
 .structure-card__example {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--color-border);
 }
 
 .structure-card__farsi {
+  font-size: 1.25rem;
   font-family: 'Vazirmatn', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
+  color: var(--color-text);
+  text-align: right;
 }
 
 .structure-card__english {
-  font-size: 0.85rem;
   color: var(--color-text-secondary);
-  font-style: italic;
 }
 
-/* Vocabulary Groups */
+/* Vocab Groups */
 .vocab-group {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.vocab-group:last-child {
+  margin-bottom: 0;
 }
 
 .vocab-group__title {
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-text-tertiary);
+  margin-bottom: 12px;
   text-transform: capitalize;
-  color: var(--color-text-secondary);
-  margin-bottom: 8px;
 }
 
 .vocab-group__words {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
 }
 
 .vocab-word-chip {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  background: white;
+  gap: 12px;
+  padding: 8px 16px;
+  background: var(--color-bg);
+  border-radius: var(--radius-full);
   border: 1px solid var(--color-border);
-  border-radius: 10px;
+}
+
+.vocab-word-chip span {
   font-family: 'Vazirmatn', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.2s;
+  font-size: 1.25rem;
+  color: var(--color-text);
 }
 
-.vocab-word-chip:hover {
-  border-color: var(--color-primary);
-  background: var(--color-primary-light);
+/* Dictation Rules */
+.summary-section__note {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: 24px;
 }
 
-/* Dictation */
+.dictation-group {
+  margin-bottom: 32px;
+}
+
 .dictation-group__row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  display: flex;
+  gap: 24px;
+}
+
+.dictation-group__col {
+  flex: 1;
+  background: var(--color-bg);
+  padding: 20px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
 }
 
 .dictation-group__col h4 {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.9rem;
   color: var(--color-text-secondary);
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .dictation-words {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 12px;
 }
 
 .dictation-word {
-  padding: 4px 12px;
-  background: var(--color-surface);
-  border-radius: 8px;
   font-family: 'Vazirmatn', sans-serif;
-  font-size: 0.95rem;
-  border: 1px solid var(--color-border);
+  font-size: 1.5rem;
+  padding: 8px 16px;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
-/* Sound Groups (Chapter 2 dictation style) */
 .dictation-sounds {
-  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .dictation-sounds__letter {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .dictation-sounds__letter-char {
-  display: inline-block;
   font-family: 'Vazirmatn', sans-serif;
   font-size: 4rem;
   font-weight: 700;
   color: var(--color-primary);
+  display: inline-block;
   background: var(--color-primary-light);
   width: 100px;
   height: 100px;
   line-height: 100px;
   border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(var(--color-primary-rgb, 0,0,0), 0.15);
 }
 
 .dictation-sounds__groups {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 24px;
 }
 
 .sound-group {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: 14px;
-  padding: 16px;
-  transition: all 0.2s;
-}
-
-.sound-group:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  padding: 20px;
 }
 
 .sound-group__header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--color-border);
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed var(--color-border);
 }
 
 .sound-group__sound {
-  font-family: 'Inter', monospace;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--color-primary);
-  background: var(--color-primary-light);
-  padding: 4px 14px;
-  border-radius: 8px;
-  letter-spacing: 1px;
 }
 
 .sound-group__desc {
-  font-size: 0.88rem;
   color: var(--color-text-secondary);
   font-style: italic;
 }
@@ -279,89 +233,85 @@
 .sound-group__examples {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 
 .sound-group__example {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: var(--color-surface);
-  flex-wrap: wrap;
+  gap: 12px;
+  background: white;
+  padding: 12px 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
 }
 
 .sound-group__farsi {
   font-family: 'Vazirmatn', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  min-width: 60px;
+  font-size: 1.5rem;
+  flex: 1;
+  text-align: right;
 }
 
 .sound-group__translit {
-  font-size: 0.85rem;
-  color: var(--color-primary);
-  font-weight: 500;
-  min-width: 60px;
+  color: var(--color-text-tertiary);
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .sound-group__english {
-  font-size: 0.82rem;
   color: var(--color-text-secondary);
-  flex: 1;
 }
 
 /* Completion */
 .summary-page__complete {
-  margin-top: 32px;
+  margin-top: 48px;
+  animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .complete-badge {
   text-align: center;
-  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
-  border: 2px solid var(--color-correct);
-  border-radius: 24px;
-  padding: 40px 30px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
 }
 
 .complete-badge__emoji {
-  font-size: 3.5rem;
-  display: block;
-  margin-bottom: 12px;
+  font-size: 4rem;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .complete-badge h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--color-correct);
-  margin-bottom: 6px;
+  font-size: 2rem;
+  color: var(--color-text);
+  margin-bottom: 8px;
 }
 
 .complete-badge p {
-  font-size: 0.95rem;
   color: var(--color-text-secondary);
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .complete-badge__btn {
   display: inline-block;
-  padding: 12px 28px;
-  background: var(--color-correct);
+  padding: 16px 32px;
+  background: var(--color-primary);
   color: white;
-  border-radius: 12px;
-  text-decoration: none;
   font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
   transition: all 0.2s;
+  box-shadow: var(--shadow-md);
 }
 
 .complete-badge__btn:hover {
-  background: #4e8b1a;
+  background: var(--color-primary-dark);
   transform: translateY(-2px);
-}
-
-@media (max-width: 500px) {
-  .dictation-group__row {
-    grid-template-columns: 1fr;
-  }
+  box-shadow: var(--shadow-lg);
 }

@@ -6,6 +6,7 @@ import FillBlank from '../components/FillBlank';
 import MCQ from '../components/MCQ';
 import Matching from '../components/Matching';
 import Rearrange from '../components/Rearrange';
+import StepLayout from '../components/StepLayout';
 import './ExercisesPage.css';
 
 export default function ExercisesPage() {
@@ -25,6 +26,8 @@ export default function ExercisesPage() {
 
   const currentExercise = exercises[currentIndex];
   const totalCorrect = results.filter(r => r).length;
+  const isAnswered = results[currentIndex] !== undefined;
+  const isCorrect = results[currentIndex] === true;
 
   function handleExerciseComplete(correct) {
     setResults(prev => {
@@ -35,7 +38,7 @@ export default function ExercisesPage() {
     saveExerciseScore(currentExercise.id, correct ? 1 : 0);
   }
 
-  function handleNext() {
+  function handleContinue() {
     if (currentIndex < exercises.length - 1) {
       setCurrentIndex(prev => prev + 1);
     } else {
@@ -66,73 +69,54 @@ export default function ExercisesPage() {
     }
   }
 
-  return (
-    <div className="exercises-page">
-      <div className="exercises-page__header">
-        <Link to={`/chapter/${id}`} className="exercises-page__back">← Back</Link>
-        <h1 className="exercises-page__title">📝 Exercises</h1>
-        <p className="exercises-page__subtitle" dir="rtl">{chapter.title}</p>
-      </div>
-
-      {/* Progress indicator */}
-      <div className="exercises-page__progress">
-        <div className="exercises-page__progress-bar">
-          <div
-            className="exercises-page__progress-fill"
-            style={{ width: `${((currentIndex + (results[currentIndex] !== undefined ? 1 : 0)) / exercises.length) * 100}%` }}
-          />
-        </div>
-        <span className="exercises-page__counter">
-          {Math.min(currentIndex + 1, exercises.length)} / {exercises.length}
-        </span>
-      </div>
-
-      {/* Exercise Area */}
-      {!showResults ? (
-        <div className="exercises-page__content">
-          {currentExercise && renderExercise(currentExercise)}
-
-          {results[currentIndex] !== undefined && currentIndex < exercises.length - 1 && (
-            <button className="exercises-page__next-btn" onClick={handleNext}>
-              Next Exercise →
-            </button>
-          )}
-          {results[currentIndex] !== undefined && currentIndex === exercises.length - 1 && (
-            <button className="exercises-page__next-btn" onClick={handleNext}>
-              Finish! 🎉
-            </button>
-          )}
-        </div>
-      ) : (
-        <div className="exercises-page__results">
-          <div className="results-card">
-            <div className="results-card__emoji">
-              {totalCorrect === exercises.length ? '🏆' : totalCorrect >= exercises.length / 2 ? '⭐' : '💪'}
-            </div>
-            <h2 className="results-card__title">
-              {totalCorrect === exercises.length ? 'Perfect Score!' : totalCorrect >= exercises.length / 2 ? 'Great Job!' : 'Keep Practicing!'}
-            </h2>
-            <div className="results-card__score">
-              <span className="results-card__number">{totalCorrect}</span>
-              <span className="results-card__total">/ {exercises.length} correct</span>
-            </div>
-            <div className="results-card__bar">
-              <div
-                className="results-card__bar-fill"
-                style={{ width: `${(totalCorrect / exercises.length) * 100}%` }}
-              />
-            </div>
-            <div className="results-card__actions">
-              <button className="results-card__retry" onClick={handleRestart}>
-                Try Again
-              </button>
-              <Link to={`/chapter/${id}`} className="results-card__done">
-                Back to Chapter
-              </Link>
-            </div>
+  if (showResults) {
+    return (
+      <StepLayout
+        currentStep={exercises.length}
+        totalSteps={exercises.length}
+        onCloseUrl={`/chapter/${id}`}
+        onContinue={() => window.location.hash = `/chapter/${id}`}
+        continueLabel="Back to Chapter"
+        continueVariant="success"
+      >
+        <div className="exercises-results">
+          <div className="exercises-results__emoji">
+            {totalCorrect === exercises.length ? '🏆' : totalCorrect >= exercises.length / 2 ? '⭐' : '💪'}
           </div>
+          <h2 className="exercises-results__title">
+            {totalCorrect === exercises.length ? 'Perfect Score!' : totalCorrect >= exercises.length / 2 ? 'Great Job!' : 'Keep Practicing!'}
+          </h2>
+          <div className="exercises-results__score">
+            <span className="exercises-results__number">{totalCorrect}</span>
+            <span className="exercises-results__total">/ {exercises.length} correct</span>
+          </div>
+          <div className="exercises-results__bar">
+            <div
+              className="exercises-results__bar-fill"
+              style={{ width: `${(totalCorrect / exercises.length) * 100}%` }}
+            />
+          </div>
+          <button className="btn-secondary" onClick={handleRestart} style={{marginTop: '24px', width: '100%', padding: '12px', borderRadius: '16px', fontWeight: 'bold'}}>
+            Try Again
+          </button>
         </div>
-      )}
-    </div>
+      </StepLayout>
+    );
+  }
+
+  return (
+    <StepLayout
+      currentStep={currentIndex}
+      totalSteps={exercises.length}
+      onCloseUrl={`/chapter/${id}`}
+      onContinue={handleContinue}
+      continueLabel={isAnswered ? "Continue" : "Select an answer"}
+      continueDisabled={!isAnswered}
+      continueVariant={isAnswered ? (isCorrect ? "success" : "danger") : "primary"}
+    >
+      <div className="exercises-content">
+        {currentExercise && renderExercise(currentExercise)}
+      </div>
+    </StepLayout>
   );
 }

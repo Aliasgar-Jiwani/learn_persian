@@ -24,10 +24,13 @@ export default function Home() {
             and interactive exercises.
           </p>
           
-          <Link to="/chapter/lesson_1" className="hero__cta hover-lift">
+          <button 
+            onClick={() => document.getElementById('learning-path')?.scrollIntoView({ behavior: 'smooth' })}
+            className="hero__cta hover-lift"
+          >
             <span>Start Learning</span>
             <Play size={18} className="hero__cta-icon" />
-          </Link>
+          </button>
           
           <p className="hero__guest-note">
             No sign-up required. Free & Open.
@@ -36,7 +39,7 @@ export default function Home() {
       </section>
 
       {/* Chapters Section */}
-      <section className="chapters-section animate-slide-up">
+      <section id="learning-path" className="chapters-section animate-slide-up">
         <div className="section-header">
           <h2 className="section-title">Learning Path</h2>
           <p className="section-subtitle">Start your journey from the basics</p>

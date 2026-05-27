@@ -201,3 +201,93 @@ a:focus-visible {
     font-size: 18px;
   }
 }
+
+/* ── Duolingo-style Utilities ── */
+
+.btn-duo {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  text-align: center;
+  position: relative;
+  user-select: none;
+  outline: none;
+}
+
+.btn-duo:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.btn-duo:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.btn-duo--primary {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 0 var(--color-primary-dark);
+}
+
+.btn-duo--success {
+  background-color: var(--color-correct);
+  color: white;
+  box-shadow: 0 4px 0 #117a37; /* Darker green */
+}
+
+.btn-duo--danger {
+  background-color: var(--color-wrong);
+  color: white;
+  box-shadow: 0 4px 0 #991b1b; /* Darker red */
+}
+
+/* Duolingo Modal (Bottom Sheet) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: flex-end; /* Align to bottom */
+  justify-content: center;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 24px 24px 0 0;
+  padding: 32px 24px;
+  padding-bottom: max(32px, env(safe-area-inset-bottom));
+  animation: slideUpModal 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--color-text-tertiary);
+  padding: 8px;
+  cursor: pointer;
+}
+
+@keyframes slideUpModal {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}

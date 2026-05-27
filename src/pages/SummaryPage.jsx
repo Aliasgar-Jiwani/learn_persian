@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useChapter } from '../hooks/useChapter';
 import { useProgress } from '../hooks/useProgress';
 import SpeakButton from '../components/SpeakButton';
+import StepLayout from '../components/StepLayout';
 import './SummaryPage.css';
 
 export default function SummaryPage() {
@@ -20,14 +21,21 @@ export default function SummaryPage() {
   }
 
   return (
-    <div className="summary-page">
-      <div className="summary-page__header">
-        <Link to={`/chapter/${id}`} className="summary-page__back">← Back</Link>
-        <h1 className="summary-page__title">📋 Chapter Summary</h1>
-        <p className="summary-page__subtitle" dir="rtl">{chapter.title} — {summary.title_english}</p>
-      </div>
+    <StepLayout
+      currentStep={1}
+      totalSteps={1}
+      onCloseUrl={`/chapter/${id}`}
+      onContinue={() => window.location.hash = `/chapter/${id}`}
+      continueLabel="Return to Chapter"
+      continueVariant="primary"
+    >
+      <div className="summary-page">
+        <div className="summary-page__header">
+          <h1 className="summary-page__title">📋 Chapter Summary</h1>
+          <p className="summary-page__subtitle" dir="rtl">{chapter.title} — {summary.title_english}</p>
+        </div>
 
-      <div className="summary-page__content">
+        <div className="summary-page__content">
         {/* Sentence Structures */}
         <section className="summary-section">
           <h2 className="summary-section__title">📐 Sentence Structures</h2>
@@ -136,7 +144,8 @@ export default function SummaryPage() {
             </div>
           </div>
         )}
+        </div>
       </div>
-    </div>
+    </StepLayout>
   );
 }
