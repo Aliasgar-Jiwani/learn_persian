@@ -5,4 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/learn_persian/',
+  build: {
+    rollupOptions: {
+      checks: {
+        pluginTimings: false
+      }
+    }
+  }
 })

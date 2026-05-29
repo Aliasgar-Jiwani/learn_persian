@@ -116,7 +116,7 @@ export default function PatternsPage() {
             <div className="example-duo">
               {img ? (
                 <div className="example-duo__image-wrap">
-                  <img src={img} alt={englishWord || example.english} className="example-duo__image" />
+                  <img src={img} alt={englishWord || example.english} className="example-duo__image" loading="lazy" />
                 </div>
               ) : emoji ? (
                 <div className="example-duo__emoji">{emoji}</div>
