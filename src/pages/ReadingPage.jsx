@@ -37,6 +37,12 @@ export default function ReadingPage() {
     }
   }
 
+  function handleBack() {
+    if (activeText > 0) {
+      setActiveText(i => i - 1);
+    }
+  }
+
   // Build a simple word lookup from chapter vocabulary
   function lookupWord(farsiWord) {
     const clean = farsiWord.replace(/[.،؟!]/g, '').trim();
@@ -82,6 +88,7 @@ export default function ReadingPage() {
         totalSteps={texts.length}
         onCloseUrl={`/chapter/${id}`}
         onContinue={() => window.location.hash = `/chapter/${id}`}
+        onBack={() => setIsFinished(false)}
         continueLabel="Back to Chapter"
         continueVariant="success"
       >
@@ -102,6 +109,7 @@ export default function ReadingPage() {
       totalSteps={texts.length}
       onCloseUrl={`/chapter/${id}`}
       onContinue={handleContinue}
+      onBack={activeText > 0 ? handleBack : undefined}
       continueLabel={activeText === texts.length - 1 ? "Finish Reading" : "Next Reading"}
     >
       <div className="reading-content" onClick={() => setTooltip(null)}>

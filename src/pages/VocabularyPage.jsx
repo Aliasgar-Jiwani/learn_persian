@@ -89,6 +89,12 @@ export default function VocabularyPage() {
     }
   }
 
+  function handleBack() {
+    if (currentIndex > 0) {
+      setCurrentIndex(i => i - 1);
+    }
+  }
+
   if (isFinished) {
     return (
       <StepLayout
@@ -96,6 +102,7 @@ export default function VocabularyPage() {
         totalSteps={steps.length}
         onCloseUrl={`/chapter/${id}`}
         onContinue={() => window.location.hash = `/chapter/${id}`}
+        onBack={() => setIsFinished(false)}
         continueLabel="Back to Chapter"
         continueVariant="success"
       >
@@ -116,6 +123,7 @@ export default function VocabularyPage() {
       totalSteps={steps.length}
       onCloseUrl={`/chapter/${id}`}
       onContinue={handleContinue}
+      onBack={currentIndex > 0 ? handleBack : undefined}
       continueLabel="Continue"
     >
       <div className="vocab-step__category">

@@ -251,6 +251,28 @@ a:focus-visible {
   box-shadow: 0 4px 0 #991b1b; /* Darker red */
 }
 
+.btn-duo--back {
+  background-color: #ffffff;
+  color: var(--color-text-secondary);
+  border: 2px solid var(--color-border);
+  box-shadow: 0 4px 0 #d1d5db;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.95rem;
+}
+
+.btn-duo--back:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.btn-duo--back:hover {
+  background-color: var(--color-bg);
+  border-color: var(--color-text-tertiary);
+}
+
 /* Duolingo Modal (Bottom Sheet) */
 .modal-overlay {
   position: fixed;

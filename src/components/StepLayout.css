@@ -105,7 +105,19 @@
   flex-shrink: 0; /* Ensure the footer never gets squished or pushed out */
 }
 
-.step-layout__footer .btn-duo {
+.step-layout__footer-actions {
   width: 100%;
   max-width: 600px;
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.step-layout__footer .btn-duo--back {
+  flex: 0 0 auto;
+  min-width: 100px;
+}
+
+.step-layout__footer .btn-duo:not(.btn-duo--back) {
+  flex: 1;
 }

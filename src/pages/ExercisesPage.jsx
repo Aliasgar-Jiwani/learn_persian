@@ -47,6 +47,12 @@ export default function ExercisesPage() {
     }
   }
 
+  function handleBack() {
+    if (currentIndex > 0) {
+      setCurrentIndex(prev => prev - 1);
+    }
+  }
+
   function handleRestart() {
     setCurrentIndex(0);
     setResults([]);
@@ -76,6 +82,7 @@ export default function ExercisesPage() {
         totalSteps={exercises.length}
         onCloseUrl={`/chapter/${id}`}
         onContinue={() => window.location.hash = `/chapter/${id}`}
+        onBack={() => { setShowResults(false); setCurrentIndex(exercises.length - 1); }}
         continueLabel="Back to Chapter"
         continueVariant="success"
       >
@@ -110,6 +117,7 @@ export default function ExercisesPage() {
       totalSteps={exercises.length}
       onCloseUrl={`/chapter/${id}`}
       onContinue={handleContinue}
+      onBack={currentIndex > 0 ? handleBack : undefined}
       continueLabel={isAnswered ? "Continue" : "Select an answer"}
       continueDisabled={!isAnswered}
       continueVariant={isAnswered ? (isCorrect ? "success" : "danger") : "primary"}

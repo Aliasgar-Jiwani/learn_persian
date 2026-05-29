@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { X } from 'lucide-react';
+import { X, ChevronLeft } from 'lucide-react';
 import './StepLayout.css';
 
 export default function StepLayout({ 
@@ -8,6 +8,7 @@ export default function StepLayout({
   onCloseUrl, 
   children, 
   onContinue, 
+  onBack,
   continueLabel = "Continue",
   continueDisabled = false,
   continueVariant = "primary" // "primary", "success", "danger"
@@ -38,13 +39,25 @@ export default function StepLayout({
 
       {/* Bottom Fixed Action Bar */}
       <footer className="step-layout__footer">
-        <button 
-          className={`btn-duo btn-duo--${continueVariant}`}
-          onClick={onContinue}
-          disabled={continueDisabled}
-        >
-          {continueLabel}
-        </button>
+        <div className="step-layout__footer-actions">
+          {onBack && (
+            <button 
+              className="btn-duo btn-duo--back"
+              onClick={onBack}
+              aria-label="Go back"
+            >
+              <ChevronLeft size={20} strokeWidth={3} />
+              Back
+            </button>
+          )}
+          <button 
+            className={`btn-duo btn-duo--${continueVariant}`}
+            onClick={onContinue}
+            disabled={continueDisabled}
+          >
+            {continueLabel}
+          </button>
+        </div>
       </footer>
     </div>
   );
