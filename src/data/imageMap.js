@@ -22,6 +22,23 @@ import homemaker from '../assets/images/homemaker.png';
 import schoolBuilding from '../assets/images/school_building.png';
 import spouse from '../assets/images/spouse.png';
 
+// Scene images for Lesson 2 pattern sentences
+import bookOnTable from '../assets/images/book_on_table.png';
+import pencilOnNotebook from '../assets/images/pencil_on_notebook.png';
+import bagOnTable from '../assets/images/bag_on_table.png';
+import notebookUnderTable from '../assets/images/notebook_under_table.png';
+import girlUnderTable from '../assets/images/girl_under_table.png';
+import boyAtSchool from '../assets/images/boy_at_school.png';
+import girlInClassroom from '../assets/images/girl_in_classroom.png';
+import bagInClassroom from '../assets/images/bag_in_classroom.png';
+import pencilInBag from '../assets/images/pencil_in_bag.png';
+import girlInRoom from '../assets/images/girl_in_room.png';
+import boyAtHome from '../assets/images/boy_at_home.png';
+import womanAtHome from '../assets/images/woman_at_home.png';
+import oldManInRoom from '../assets/images/old_man_in_room.png';
+import notebookInBag from '../assets/images/notebook_in_bag.png';
+import professorInClassroom from '../assets/images/professor_in_classroom.png';
+
 // Map English words to their vector illustration
 const imageMap = {
   'book': book,
@@ -181,4 +198,56 @@ export function getEmoji(englishWord) {
   return emojiFallback[lower] || emojiFallback[lower.split(' / ')[0]] || '📚';
 }
 
+// Scene image map for Lesson 2 pattern sentences (maps English sentence to scene image)
+const sceneImageMap = {
+  // Pattern 1: X on Y
+  'the book is on the table.': bookOnTable,
+  'the pencil is on the notebook.': pencilOnNotebook,
+  'the bag is on the table.': bagOnTable,
+  'the small bag is on the table.': bagOnTable,
+  // Pattern 2: X under Y
+  'the notebook is under the table.': notebookUnderTable,
+  'the pen is under the book.': pen,
+  'the little girl is under the table.': girlUnderTable,
+  'your small pencil is under the book.': pencil,
+  // Pattern 3: Ezafe noun+adj
+  'the small book is under the table.': notebookUnderTable,
+  'the big book is on the table.': bookOnTable,
+  'the short pen is under the book.': pen,
+  'the long pencil is on the notebook.': pencilOnNotebook,
+  'the big notebook is in the bag.': notebookInBag,
+  'the old bag is on the table.': bagOnTable,
+  // Pattern 4: X in/at Y
+  'the boy is at school.': boyAtSchool,
+  'the girl is in the classroom.': girlInClassroom,
+  'the bag is in the classroom.': bagInClassroom,
+  'the pencil is in the bag.': pencilInBag,
+  'the little girl is in the room.': girlInRoom,
+  'the little boy is at home.': boyAtHome,
+  'the young woman is at home.': womanAtHome,
+  'the old man is in the room.': oldManInRoom,
+  // Pattern 5: Possession (all about "this book")
+  'this book is mine.': book,
+  'this book is yours.': book,
+  'this book is his or hers.': book,
+  'this book is ours.': book,
+  'this book is yours (formal/plural).': book,
+  'this book is theirs.': book,
+  // Pattern 6: Full noun phrase
+  'this big book is mine.': book,
+  'my big book is on the table.': bookOnTable,
+  'this big notebook is his or hers.': notebook,
+  'his or her big notebook is in the bag.': notebookInBag,
+  'this small pencil is yours.': pencil,
+  'your small pencil is under the book.': pencil,
+  'our young professor is in the classroom.': professorInClassroom,
+};
+
+export function getSceneImage(englishSentence) {
+  if (!englishSentence) return null;
+  const lower = englishSentence.toLowerCase();
+  return sceneImageMap[lower] || null;
+}
+
 export default imageMap;
+

@@ -4,7 +4,7 @@ import { useChapter } from '../hooks/useChapter';
 import { useProgress } from '../hooks/useProgress';
 import SpeakButton from '../components/SpeakButton';
 import StepLayout from '../components/StepLayout';
-import { getImage, getEmoji } from '../data/imageMap';
+import { getImage, getEmoji, getSceneImage } from '../data/imageMap';
 import { Lightbulb, X, CheckCircle } from 'lucide-react';
 import './PatternsPage.css';
 
@@ -75,10 +75,13 @@ export default function PatternsPage() {
 
   // Helpers for the current example
   const isYesNo = example.type === 'yes_no';
-  const englishWord = !isYesNo && example.english 
+  // First try scene image for the full sentence (Lesson 2 spatial patterns)
+  const sceneImg = !isYesNo && example.english ? getSceneImage(example.english) : null;
+  // Fall back to single-word extraction for Lesson 1 "This/That is a ___" patterns
+  const englishWord = !isYesNo && !sceneImg && example.english 
     ? example.english.replace(/^(This|That) is (a |an )?/, '').replace('.', '').trim() 
     : null;
-  const img = englishWord ? getImage(englishWord) : null;
+  const img = sceneImg || (englishWord ? getImage(englishWord) : null);
   const emoji = englishWord ? getEmoji(englishWord) : null;
 
   return (
@@ -113,7 +116,7 @@ export default function PatternsPage() {
             <div className="example-duo">
               {img ? (
                 <div className="example-duo__image-wrap">
-                  <img src={img} alt={englishWord} className="example-duo__image" />
+                  <img src={img} alt={englishWord || example.english} className="example-duo__image" />
                 </div>
               ) : emoji ? (
                 <div className="example-duo__emoji">{emoji}</div>

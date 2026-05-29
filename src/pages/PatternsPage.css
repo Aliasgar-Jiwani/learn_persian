@@ -104,13 +104,13 @@
 }
 
 .example-duo__image-wrap {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   border-radius: 20px;
   overflow: hidden;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
-  padding: 10px;
+  padding: 8px;
 }
 
 .example-duo__image {
