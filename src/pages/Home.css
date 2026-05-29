@@ -1,310 +1,605 @@
 /* ======================================
-   HOME PAGE STYLES
+   HOME PAGE — REDESIGNED
    ====================================== */
 
 .home {
   min-height: 100vh;
+  padding-bottom: 80px;
 }
 
-/* Shared Header for sections */
-.section-header {
-  text-align: center;
-  margin-bottom: var(--space-xl);
+.home__layout {
+  display: flex;
+  flex-direction: column;
 }
 
-.section-title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--color-text);
-  margin-bottom: var(--space-sm);
-}
-
-.section-subtitle {
-  font-size: 1.1rem;
-  color: var(--color-text-secondary);
-}
-
-/* Hero */
-.hero {
+/* ── Header ── */
+.home-header {
   position: relative;
   overflow: hidden;
-  padding: 100px 24px 80px;
-  text-align: center;
-  /* Removed heavy background gradient, keeping it clean */
+  padding: 20px 16px 24px;
 }
 
-.hero__background {
+.home-header__motif {
   position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: 100vw;
-  max-width: 1200px;
-  max-height: 1200px;
-  background: radial-gradient(circle, var(--color-primary-light) 0%, rgba(255,255,255,0) 70%);
-  z-index: -1;
-  opacity: 0.8;
+  top: -60px;
+  right: -40px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--color-primary-light) 0%,
+    rgba(204, 251, 241, 0.3) 50%,
+    transparent 70%
+  );
+  z-index: 0;
+  pointer-events: none;
 }
 
-.hero__content {
+.home-header__motif-2 {
+  position: absolute;
+  bottom: -30px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--color-accent-light) 0%,
+    transparent 70%
+  );
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Hero Card (mobile) ── */
+.home-header__content {
   position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
+  z-index: 1;
+  background: linear-gradient(145deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, #0d9488 100%);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px 24px;
+  color: white;
+  overflow: hidden;
+}
+
+/* Decorative geometric pattern overlay */
+.home-header__content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(255,255,255,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 10% 90%, rgba(255,255,255,0.06) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Persian-inspired geometric accent */
+.home-header__content::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.home-header__greeting {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.home-header__greeting-en {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.home-header__greeting-fa {
+  font-family: var(--font-farsi);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  opacity: 1;
+}
+
+.home-header__title {
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 2px;
+  position: relative;
 }
 
-.hero__badge {
-  display: inline-flex;
+.home-header__title-fa {
+  font-family: var(--font-farsi);
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: 0;
+  /* Override gradient on mobile — use white */
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: white;
+  background-clip: unset;
+  color: white;
+}
+
+.home-header__title-en {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: -0.01em;
+}
+
+.home-header__desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+}
+
+/* Quick Stats — hidden on mobile, shown on desktop */
+.home-header__stats {
+  display: none;
+}
+
+/* ── Chapters Section ── */
+.chapters-section {
+  padding: 20px 16px 0;
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.chapters-section__label {
+  display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-primary-dark);
-  margin-bottom: var(--space-xl);
-  box-shadow: var(--shadow-sm);
-}
-
-.hero__badge-icon {
-  color: var(--color-accent);
-}
-
-.hero__title {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: var(--space-lg);
-}
-
-.hero__title-farsi {
-  font-family: 'Vazirmatn', sans-serif;
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: var(--color-primary);
-  line-height: 1.2;
-}
-
-.hero__title-english {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--color-text);
-  letter-spacing: -0.02em;
-}
-
-.hero__title-translit {
-  font-size: 1.1rem;
-  color: var(--color-text-tertiary);
-  font-style: italic;
-  font-weight: 500;
-}
-
-.hero__subtitle {
-  font-size: 1.2rem;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
-  max-width: 560px;
-  margin: 0 auto var(--space-xl);
-}
-
-.hero__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: var(--color-primary);
-  color: white;
-  padding: 16px 36px;
-  border-radius: var(--radius-full);
-  font-size: 1.15rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
   font-weight: 700;
-  box-shadow: var(--shadow-md);
-}
-
-.hero__cta:hover {
-  background: var(--color-primary-dark);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
-}
-
-.hero__guest-note {
-  margin-top: var(--space-lg);
-  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   color: var(--color-text-tertiary);
-  font-weight: 500;
-}
-
-/* Chapters Section */
-.chapters-section {
-  padding: var(--space-2xl) var(--space-lg);
-  max-width: 900px;
-  margin: 0 auto;
+  margin-bottom: 16px;
+  padding-left: 4px;
 }
 
 .chapters-grid {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 12px;
 }
 
+/* ── Chapter Card ── */
 .chapter-card {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
-  padding: var(--space-lg);
-  border-radius: var(--radius-xl);
+  gap: 16px;
+  padding: 18px 16px;
+  border-radius: var(--radius-lg);
   text-decoration: none;
   color: inherit;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  border: 1px solid var(--color-border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1.5px solid var(--color-border);
+  position: relative;
 }
 
 .chapter-card:hover {
-  border-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 20px rgba(15, 118, 110, 0.08);
+}
+
+.chapter-card--complete {
+  border-color: var(--color-correct-bg);
+  background: linear-gradient(135deg, rgba(220, 252, 231, 0.3) 0%, rgba(255,255,255,0.7) 100%);
+}
+
+.chapter-card--complete:hover {
+  border-color: var(--color-correct);
 }
 
 .chapter-card--locked {
-  opacity: 0.6;
+  opacity: 0.45;
   cursor: default;
   pointer-events: none;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
 }
 
+/* Number Badge */
 .chapter-card__number {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-lg);
-  background: var(--color-primary-light);
-  color: var(--color-primary-dark);
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--color-primary);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
   font-weight: 800;
   flex-shrink: 0;
-  box-shadow: inset 0 2px 4px rgba(255,255,255,0.5);
+  transition: all 0.25s ease;
+}
+
+.chapter-card__number--done {
+  background: var(--color-correct);
 }
 
 .chapter-card__number--locked {
   background: var(--color-border);
   color: var(--color-text-tertiary);
-  box-shadow: none;
 }
 
+/* Info */
 .chapter-card__info {
   flex: 1;
+  min-width: 0;
 }
 
 .chapter-card__farsi {
-  font-family: 'Vazirmatn', sans-serif;
-  font-size: 1.5rem;
+  font-family: var(--font-farsi);
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-text);
   line-height: 1.4;
 }
 
+.chapter-card__farsi--locked {
+  font-family: var(--font-heading);
+  color: var(--color-text-tertiary);
+}
+
+.chapter-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.chapter-card__english {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.chapter-card__dot {
+  color: var(--color-border);
+  font-weight: 800;
+}
+
 .chapter-card__translit {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--color-primary);
   font-style: italic;
   font-weight: 500;
 }
 
-.chapter-card__english {
-  font-size: 1rem;
-  color: var(--color-text-secondary);
-  font-weight: 600;
+/* Progress inside card */
+.chapter-card__progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
 }
 
+.chapter-card__progress-track {
+  flex: 1;
+  height: 5px;
+  background: var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.chapter-card__progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-correct) 100%);
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.chapter-card__progress-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+  font-family: var(--font-heading);
+}
+
+/* Arrow */
 .chapter-card__arrow {
   color: var(--color-text-tertiary);
   transition: transform 0.2s, color 0.2s;
+  flex-shrink: 0;
 }
 
 .chapter-card:hover .chapter-card__arrow {
-  transform: translateX(4px);
+  transform: translateX(3px);
   color: var(--color-primary);
 }
 
-.chapter-card__lock {
-  color: var(--color-text-tertiary);
-}
-
-/* Features Section */
-.features-section {
-  padding: var(--space-2xl) var(--space-lg) 120px;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-lg);
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.feature-card {
-  border-radius: var(--radius-xl);
-  padding: var(--space-xl);
-  border: 1px solid var(--color-border);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.feature-card__icon-wrapper {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-lg);
-  background: var(--color-primary-light);
-  color: var(--color-primary-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--space-md);
-}
-
-.feature-card__icon {
-  width: 24px;
-  height: 24px;
-}
-
-.feature-card h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-text);
-  margin-bottom: var(--space-sm);
-}
-
-.feature-card p {
-  font-size: 0.95rem;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
-}
-
-@media (max-width: 600px) {
-  .hero {
-    padding: 60px 20px 40px;
+/* ── Responsive: Small Mobile ── */
+@media (max-width: 400px) {
+  .home-header {
+    padding: 16px 12px 20px;
   }
-  .hero__title-farsi {
-    font-size: 2.75rem;
+
+  .home-header__content {
+    padding: 22px 18px 20px;
   }
-  .hero__title-english {
-    font-size: 1.75rem;
+
+  .home-header__title-fa {
+    font-size: 2rem;
   }
-  .section-title {
-    font-size: 1.75rem;
+
+  .home-header__title-en {
+    font-size: 1.05rem;
   }
+
+  .chapters-section {
+    padding: 16px 12px 0;
+  }
+
   .chapter-card {
-    padding: var(--space-md);
-    gap: var(--space-md);
+    padding: 14px 12px;
+    gap: 12px;
   }
+
   .chapter-card__number {
-    width: 48px;
-    height: 48px;
-    font-size: 1.25rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+  }
+
+  .chapter-card__farsi {
+    font-size: 1.15rem;
+  }
+}
+
+/* ── Responsive: Tablet ── */
+@media (min-width: 768px) {
+  .home-header {
+    padding: 32px 32px 32px;
+  }
+
+  .home-header__content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 36px 32px 32px;
+  }
+
+  .home-header__title-fa {
+    font-size: 2.8rem;
+  }
+
+  .home-header__title-en {
+    font-size: 1.4rem;
+  }
+
+  .home-header__motif {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: 0;
+  }
+
+  .chapters-section {
+    padding: 24px 32px 0;
+  }
+}
+
+/* ── Responsive: Desktop / Laptop ── */
+@media (min-width: 1024px) {
+  .home {
+    padding-bottom: 0;
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+  }
+
+  .home__layout {
+    flex-direction: row;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 0;
+  }
+
+  /* Header becomes a sticky left sidebar panel — reset hero card */
+  .home-header {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    width: 440px;
+    min-width: 440px;
+    min-height: 100vh;
+    padding: 80px 48px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid var(--color-border);
+    background: linear-gradient(
+      180deg,
+      rgba(204, 251, 241, 0.08) 0%,
+      var(--color-bg) 50%,
+      rgba(254, 243, 199, 0.06) 100%
+    );
+  }
+
+  .home-header__motif {
+    width: 500px;
+    height: 500px;
+    top: -150px;
+    right: -100px;
+    opacity: 0.6;
+  }
+
+  .home-header__motif-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    left: -80px;
+    opacity: 0.3;
+  }
+
+  /* Reset hero card back to transparent sidebar style */
+  .home-header__content {
+    max-width: none;
+    margin: 0;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    color: var(--color-text);
+    overflow: visible;
+  }
+
+  .home-header__content::before,
+  .home-header__content::after {
+    display: none;
+  }
+
+  .home-header__greeting-en {
+    font-size: 0.85rem;
+    color: var(--color-primary);
+  }
+
+  .home-header__greeting-fa {
+    color: var(--color-primary-dark);
+    opacity: 0.7;
+  }
+
+  .home-header__title-fa {
+    font-size: 3.2rem;
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: var(--color-text);
+  }
+
+  .home-header__title-en {
+    font-size: 1.6rem;
+    color: var(--color-text-secondary);
+  }
+
+  .home-header__desc {
+    font-size: 1.05rem;
+    margin-top: 4px;
+    color: var(--color-text-tertiary);
+  }
+
+  /* Show stats on desktop */
+  .home-header__stats {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 32px;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+  }
+
+  .home-header__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .home-header__stat-num {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-primary);
+  }
+
+  .home-header__stat-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .home-header__stat-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--color-border);
+    flex-shrink: 0;
+  }
+
+  /* Chapters take the right side */
+  .chapters-section {
+    flex: 1;
+    max-width: none;
+    padding: 64px 48px 64px 56px;
+    margin: 0;
+    overflow-y: auto;
+  }
+
+  .chapters-section__label {
+    margin-bottom: 24px;
+    font-size: 0.85rem;
+  }
+
+  .chapters-grid {
+    gap: 14px;
+    max-width: 640px;
+  }
+
+  .chapter-card {
+    padding: 20px 20px;
+    gap: 20px;
+  }
+
+  .chapter-card__number {
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+  }
+
+  .chapter-card__farsi {
+    font-size: 1.4rem;
+  }
+}
+
+/* ── Responsive: Extra wide ── */
+@media (min-width: 1440px) {
+  .home-header {
+    width: 520px;
+    min-width: 520px;
+    padding: 80px 64px 48px;
+  }
+
+  .home-header__title-fa {
+    font-size: 3.5rem;
+  }
+
+  .home-header__title-en {
+    font-size: 1.75rem;
+  }
+
+  .chapters-section {
+    padding: 72px 64px 72px 72px;
   }
 }
